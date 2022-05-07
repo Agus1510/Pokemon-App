@@ -1,0 +1,75 @@
+.container {
+    margin: 100px;
+    align-items: center;
+    text-align: center;
+    margin-top: 10em;
+  }
+  
+  .field {
+    display: flex;
+    position: relative;
+    margin: 5em auto;
+    width: 70%;
+    flex-direction: row;
+    box-shadow: 1px 1px 0 rgb(250, 215, 20), 2px 2px 0 rgb(250, 215, 20),
+      3px 3px 0 rgb(250, 215, 20), 4px 4px 0 rgb(250, 215, 20),
+      5px 5px 0 rgb(250, 215, 20), 6px 6px 0 rgb(250, 215, 20),
+      7px 7px 0 rgb(250, 215, 20);
+      border-radius: 2em;
+  }
+  
+  .field > input[type="text"],
+  .field > .button {
+    display: block;
+    font: 1.2em "Montserrat Alternates";
+  }
+  
+  .field > input[type="text"] {
+    flex: 1;
+    padding: 0.6em;
+    border: 0.2em solid rgb(235, 220, 12);
+    border-radius: 2em 0em 0em 2em;
+  }
+  
+  .field > .button {
+    padding: 0.6em 0.8em;
+    background-color: rgb(235, 220, 12);
+    color: rgb(49, 48, 48);
+    border: none;
+    border-radius: 0em 2em 2em 0em;
+  }
+  
+  .field2 {
+    margin-top: -50px;
+    border-radius: 2em
+  }
+  
+  .field2 > .button {
+    padding: 0.6em 0.8em;
+    background-color: rgb(235, 220, 12);
+    color: rgb(49, 46, 46);
+    border: none;
+    
+  }
+
+  .field2 > .button0 {
+    padding: 0.6em 0.8em;
+    background-color: rgb(235, 220, 12);
+    color: rgb(49, 46, 46);
+    border: none;
+    border-radius:2em 0em 0em 2em ;
+    
+  }
+
+  .field2 > .button2 {
+    padding: 0.6em 0.8em;
+    background-color: rgb(235, 220, 12);
+    color: rgb(49, 46, 46);
+    border: none;
+    border-radius: 0em 2em 2em 0em;
+    
+  }
+
+  @media (max-width : 700px){
+    
+  }
