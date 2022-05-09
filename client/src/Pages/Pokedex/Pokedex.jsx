@@ -38,7 +38,11 @@ export const Pokedex = () => {
   return (
     <div className={style.container}>
       <Search />
-      <div className="botones">
+      <Card
+        array={array}
+        img={"https://i.giphy.com/media/10LKovKon8DENq/giphy.webp"}
+      />
+        <div className="botones">
         <button onClick={previousPage} className="pagesP">
           &laquo; Previous
         </button>
@@ -46,10 +50,6 @@ export const Pokedex = () => {
           Next &raquo;
         </button>
       </div>
-      <Card
-        array={array}
-        img={"https://i.giphy.com/media/10LKovKon8DENq/giphy.webp"}
-      />
     </div>
   );
 };

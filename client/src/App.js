@@ -20,10 +20,11 @@ import { Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { LandingPage } from "./Pages/Landing/index";
 import { Pokedex } from "./Pages/Pokedex/Pokedex";
-// import { Create } from "./Pages/Create/Create";
+import { Create } from "./Pages/Create/Create";
+import { Team} from "./Pages/Team/Team"
 import { Navbar } from "./components/Navbar/Navbar";
 import { getPokemons, getTypes } from "./actions";
-// import { Pokemon } from "./components/Pokemon/Pokemon";
+import { Pokemon } from "./components/Pokemon/Pokemon";
 
 function App() {
 
@@ -35,9 +36,9 @@ function App() {
 
   return (
     <>
-      {/* <Route exact path="/pokedex/:id" >
+      <Route exact path="/pokedex/:id" >
         <Pokemon />
-      </Route> */}
+      </Route>
       <Switch>
       <Route exact path="/">
         <LandingPage />
@@ -47,12 +48,12 @@ function App() {
             <Route exact path="/home">
             <Pokedex />
             </Route>
-      {/* <Route exact path="/create">
+      <Route exact path="/create">
         <Create />
       </Route>
       <Route exact path="/team">
         <Team />
-      </Route> */}
+      </Route>
       </Route>
       </Switch>
     </>

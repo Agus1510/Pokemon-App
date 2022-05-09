@@ -1,7 +1,6 @@
 import {React, useEffect} from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, matchPath, useLocation} from "react-router-dom";
 import style from './navbar.module.css';
-;
 
 export const Navbar = () => {
   useEffect(() => {
@@ -10,18 +9,23 @@ export const Navbar = () => {
       let anchor
       if (e.target.matches("a")) {
         anchor = e.target
-      } else {
+      } 
+      else {
         anchor = e.target.closest("a")
       }
       if (anchor != null) {
         const allAnchors = [...document.querySelectorAll("a")]
         const index = allAnchors.indexOf(anchor)
+        if (index > 0 && index <5){
         indicator.style.setProperty("--position", index-1)
+        } else{
+          indicator.style.setProperty("--position", 1)
+        }
       }
     })
   })
   return (
-    <div>
+    <body>
       <header className={ style.header } >
         <Link to="/" className={ style.logo }>
           <img src="img/logo.png" alt="" />
@@ -33,6 +37,10 @@ export const Navbar = () => {
                 <div className={style.corners}></div>
                 </div>
             <li ><NavLink activeClassName={style.active} to="/home">
+                <div className={style.icon}><img src= "img/home.svg" /></div>
+                <div className={style.text}>Home</div>
+                </NavLink></li>
+              <li ><NavLink activeClassName={style.active} to="/pokedex">
                 <div className={style.icon}><img src= "img/pokedex.svg" /></div>
                 <div className={style.text}>Pokedex</div>
                 </NavLink></li>
@@ -40,13 +48,13 @@ export const Navbar = () => {
             <div className={style.icon}><img src= "img/create.png" /></div>
                 <div className={style.text}>Create</div>
                 </NavLink></li>
-            <li ><NavLink  activeClassName={style.active} to="/team" >
+            {/* <li ><NavLink  activeClassName={style.active} to="/team" >
             <div className={style.icon}><img src= "img/team.png" /></div>
                 <div className={style.text}>My team</div>
-                </NavLink></li>
+                </NavLink></li> */}
         </ul>
         </nav>
       </header>
-    </div>
+    </body>
   );
 };

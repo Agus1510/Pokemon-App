@@ -43,14 +43,14 @@ export const Search = () => {
             id="searchterm"
             value={pokemons}
             onChange={handleInputChange}
-            placeholder="Encuentra tu pokemon..."
+            placeholder="Find your Pokemon..."
           />
           <input className={button} type="submit" value="Find!" />
         </div>
       </form>
       <div className={style.field2}>
         <select className={button0} name="Type" onChange={byTipo}>
-          <option value="">Tipo:</option>
+          <option value="">Type:</option>
           {options?.map((p) => (
             <option value={p.name} key={p.slot}>
               {p.name}
@@ -58,12 +58,12 @@ export const Search = () => {
           ))}
         </select>
         <select name="creado" className={button} onChange={creadoBy}>
-          <option value="0">Creado por:</option>
+          <option value="0">Created by:</option>
           <option value="1">API</option>
           <option value="2">Fandom</option>
         </select>
         <select name="Ordenar" className={button2} onChange={orderBy}>
-          <option value="">Ordenar por:</option>
+          <option value="">Order by:</option>
           <option value="a-z">A-Z</option>
           <option value="z-a">Z-A</option>
           <option value="fuerza+">Fuerza+</option>

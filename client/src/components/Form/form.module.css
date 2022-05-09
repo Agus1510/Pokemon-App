@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+
+.containerCreate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url("./fondo.jpg");
+    background-size: cover;
+  }
+  
+  label {
+    padding: 4px 6px;
+    line-height: 190%;
+    outline-style: none;
+    transition: all 0.6s;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  h1{
+    font-family: 'Roboto Condensed', sans-serif;;
+  }
+
+  .form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 30px 25px;
+    background-color: #f2f2f2;
+    border-radius: 40px;
+    margin-top: 80px;
+  }
+  
+  .separado {
+    padding-right: 100px;
+    color: rgb(34, 31, 31);
+  }
+  
+  .tipos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    color: rgb(34, 31, 31) ;
+  }
+  
+  .tipos label {
+    margin-top: 100px;
+  }
+  
+  .hiddenCB div {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .hiddenCB h1{
+    color: rgb(34, 31, 31) ;
+    font-family: 'Roboto Condensed', sans-serif;;
+  }
+  
+  .hiddenCB input[type="checkbox"],
+  .hiddenCB input[type="radio"] {
+    display: none;
+  }
+  
+  .hiddenCB label {
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .hiddenCB input[type="checkbox"] + label:hover {
+    background: rgb(233, 35, 0);
+  }
+  
+  .hiddenCB input[type="checkbox"]:checked + label {
+    background: rgba(235, 52, 46, 0.4);
+  }
+  
+  .hiddenCB input[type="checkbox"]:checked + label:hover {
+    background: rgba(0, 128, 128, 0, 0.7);
+  }
+  
+  .question {
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .question:first-of-type {
+    padding-top: 0;
+  }
+  
+  .question:last-of-type {
+    padding-top: 0;
+  }
+  
+  .question label {
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .danger label {
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    font-size: 17px;
+    color: red;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  form .danger input {
+    appearance: none;
+    text-align: center;
+    background-color: none;
+    border: 1px solid rgba(240, 1, 1, 0.89);
+    line-height: 0;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 60px;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    z-index: 1;
+  }
+  
+  form .question input {
+    appearance: none;
+    text-align: center;
+    background-color: none;
+    border: 1px solid rgba(71, 62, 62, 0.815);
+    line-height: 0;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    z-index: 1;
+  }
+  
+  .question input:focus {
+    outline: none;
+    background: rgba(255, 244, 196, 0.767);
+    color: rgb(77, 76, 76);
+  }
+  
+  .submit {
+    margin-top: 200px;
+    padding: 0.6em 0.8em;
+    width: 100px;
+    margin-right: 20px;
+    background-color: rgb(218, 6, 6);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  

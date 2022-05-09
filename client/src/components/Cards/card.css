@@ -12,11 +12,12 @@ img {
     margin: 0;
     font-weight: 400;
   }
-  
+
+
   .container {
     display: flex;
     justify-content: space-around;
-    margin-top: -50px;
+    margin-top: -6em;
     flex-direction: row;
     flex-wrap: wrap;
     flex: 2;
@@ -25,7 +26,7 @@ img {
   .botones {
     display: flex;
     justify-content: center;
-    padding-bottom: 40px;
+    margin-top: 5em ;
   }
   
   .pagesN {
@@ -77,7 +78,7 @@ img {
     letter-spacing: 0.1em;
     padding: 0.25em;
     line-height: 1;
-    border-radius: 2px;
+    border-radius: 0.3em;
     background: #bbbbbb;
   }
   
@@ -86,6 +87,8 @@ img {
     font-size: 1.5em;
     font-weight: 700;
     letter-spacing: 0.02em;
+    color: rgb(46, 46, 46);
+    padding-top: 1em;
   }
   
   .types {
@@ -97,6 +100,12 @@ img {
     background: linear-gradient(110deg, #fdbb2d 0%, #3a1c71 100%);
     box-shadow: 0px 5px 20px -10px #3a1c71;
   }
+
+  .normal:hover {
+    background: linear-gradient(80deg, #3a1c71 0%, #fdbb2d 100%);
+    box-shadow: 0px 5px 20px -10px #3a1c71;
+  }
+  
   
   .normal .cardType {
     background-color: #c08a53;
@@ -104,6 +113,11 @@ img {
   
   .ground {
     background: linear-gradient(110deg, #b1742c 0%, #724c1f 100%);
+    box-shadow: 0px 5px 20px -10px #3a1c71;
+  }
+
+  .ground:hover {
+    background: linear-gradient(70deg, #724c1f 0%, #b1742c 100%);
     box-shadow: 0px 5px 20px -10px #3a1c71;
   }
   
@@ -115,6 +129,11 @@ img {
     background: linear-gradient(110deg, #491809 0%, #913f20 100%);
     box-shadow: 0px 5px 20px -10px #3a1c71;
   }
+
+  .rock:hover {
+    background: linear-gradient(50deg, #913f20 0%, #491809 100%);
+    box-shadow: 0px 5px 20px -10px #3a1c71;
+  }
   
   .rock .cardType {
     background-color: #913f20;
@@ -122,6 +141,15 @@ img {
   
   .water {
     background: linear-gradient(120deg, #1cb5e0 0%, #000851 100%);
+    box-shadow: 0px 5px 20px -10px #000851;
+  }
+
+  .water:hover {
+    background: linear-gradient(
+      40deg, 
+      #000851 0%, 
+      #1cb5e0 100%
+    );
     box-shadow: 0px 5px 20px -10px #000851;
   }
   
@@ -136,6 +164,14 @@ img {
       rgba(232, 255, 153, 1) 83%
     );
   }
+
+  .electric:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(232, 255, 153, 1) 34%,
+      rgba(255, 222, 0, 1) 83%
+    );
+  }
   
   .electric .cardType {
     background-color: #000;
@@ -146,6 +182,14 @@ img {
       0deg,
       rgba(199, 24, 0, 1) 10%,
       rgba(252, 194, 69, 1) 100%
+    );
+  }
+
+  .fire:hover {
+    background: linear-gradient(
+      40deg,
+      rgba(252, 194, 69, 1) 10%,
+      rgba(199, 24, 0, 1) 100%
     );
   }
   
@@ -162,6 +206,15 @@ img {
     );
   }
   
+  .psychic:hover {
+    background: linear-gradient(
+      100deg,
+      rgba(255, 227, 167, 1) 0%,
+      rgba(255, 44, 195, 1) 39%,
+      rgba(255, 167, 249, 1) 100%
+    );
+  }
+
   .psychic .cardType {
     background: #ff2cc3;
   }
@@ -174,6 +227,16 @@ img {
       rgba(92, 2, 73, 1) 100%
     );
   }
+
+  .dark:hover {
+    background: linear-gradient(
+      60deg,
+      rgba(92, 2, 73, 1) 0%,
+      rgba(16, 11, 50, 1) 33%,
+      rgba(25, 25, 25, 1) 100%
+    );
+  }
+
   
   .dark .cardType {
     background: #5c0249;
@@ -185,6 +248,15 @@ img {
       rgba(25, 25, 25, 1) 0%,
       rgba(16, 11, 50, 1) 33%,
       rgba(92, 2, 73, 1) 100%
+    );
+  }
+
+  .shadow:hover {
+    background: linear-gradient(
+      60deg,
+      rgba(92, 2, 73, 1) 0%,
+      rgba(16, 11, 50, 1) 33%,
+      rgba(25, 25, 25, 1) 100%
     );
   }
   
@@ -200,6 +272,15 @@ img {
       rgba(25, 25, 25, 1) 0%
     );
   }
+
+  .poison:hover {
+    background: linear-gradient(
+      80deg,
+      rgba(25, 25, 25, 1) 0%,
+      rgba(16, 11, 50, 1) 33%,
+      rgba(92, 2, 73, 1) 0%
+    );
+  }
   
   .poison .cardType {
     background: #5c0249;
@@ -211,6 +292,15 @@ img {
       rgba(196, 218, 61, 1) 0%,
       rgba(110, 127, 14, 1) 69%,
       rgba(39, 80, 9, 1) 100%
+    );
+  }
+
+  .grass:hover {
+    background: linear-gradient(
+      140deg,
+      rgba(39, 80, 9, 1) 0%,
+      rgba(110, 127, 14, 1) 69%,
+      rgb(196, 218, 61, 1) 100%
     );
   }
   
@@ -226,12 +316,30 @@ img {
     );
   }
   
+  .bug:hover {
+    background: linear-gradient(
+      140deg,
+      rgba(196, 218, 61, 1) 0%,
+      rgba(110, 127, 14, 1) 69%,
+      rgba(39, 80, 9, 1) 100%
+    );
+  }
+
   .ice {
     background: linear-gradient(
       230deg,
       rgba(202, 234, 246, 1) 0%,
       rgba(160, 234, 241, 1) 46%,
       rgba(111, 184, 235, 1) 100%
+    );
+  }
+
+  .ice:hover {
+    background: linear-gradient(
+      230deg,
+      rgba(111, 184, 235, 1) 0%,
+      rgba(160, 234, 241, 1) 46%,
+      rgba(202, 234, 246, 1) 100%
     );
   }
   
@@ -252,6 +360,17 @@ img {
       rgba(255, 138, 149, 1) 100%
     );
   }
+
+  .fairy:hover {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 138, 149, 1) 0%,
+      rgba(255, 166, 185, 1) 34%,
+      rgba(255, 197, 224, 1) 71%,
+      rgba(255, 230, 240, 1) 100%
+    );
+  }
+  
   
   .fairy .cardType {
     background: #ff8a95;
@@ -268,6 +387,10 @@ img {
   .flying {
     background: linear-gradient(110deg, #4d6c81 0%, #698ba5 100%);
   }
+
+  .flying:hover {
+    background: linear-gradient(50deg, #698ba5 0%, #4d6c81 100%);
+  }
   
   .flying .cardType {
     background: #4d6c81;
@@ -275,6 +398,10 @@ img {
   
   .dragon {
     background: linear-gradient(110deg, #44929e 0%, #5fd5e7 100%);
+  }
+
+  .dragon:hover {
+    background: linear-gradient(110deg, #5fd5e7 0%, #44929e 100%);
   }
   
   .dragon .cardType {
@@ -285,6 +412,10 @@ img {
   .steel {
     background: linear-gradient(110deg, #5d7b6f 0%, #3bcb9b 100%);
   }
+
+  .steel:hover {
+    background: linear-gradient(80deg, #3bcb9b 0%, #5d7b6f 100%);
+  }
   
   .steel .cardType {
     background: #3bcb9b;
@@ -293,37 +424,41 @@ img {
   .fighting {
     background: linear-gradient(110deg, #A34027 0%, #FB6537 100%);
   }
+
+  .fighting:hover {
+    background: linear-gradient(80deg, #FB6537 0%, #A34027 100%);
+  }
   
   .fighting .cardType {
     background: #FB6537;
   }
   
   figure:nth-child(1) {
-    transform: translateY(0px) rotate(-2deg);
+    transform: translateY(0px);
   }
   figure:nth-child(2) {
-    transform: translateY(0px) rotate(1deg);
+    transform: translateY(0px);
   }
   figure:nth-child(3) {
-    transform: translateY(0px) rotate(-3deg);
+    transform: translateY(0px);
   }
   figure:nth-child(4) {
-    transform: translateY(0px) rotate(2deg);
+    transform: translateY(0px);
   }
   figure:nth-child(5) {
-    transform: translateY(0px) rotate(4deg);
+    transform: translateY(0px);
   }
   figure:nth-child(6) {
-    transform: translateY(0px) rotate(-2deg);
+    transform: translateY(0px);
   }
   figure:nth-child(7) {
-    transform: translateY(0px) rotate(3deg);
+    transform: translateY(0px);
   }
   figure:nth-child(8) {
-    transform: translateY(0px) rotate(-1deg);
+    transform: translateY(0px);
   }
   figure:nth-child(9) {
-    transform: translateY(0px) rotate(-2deg);
+    transform: translateY(0px);
   }
   figure:hover {
     z-index: 5;
