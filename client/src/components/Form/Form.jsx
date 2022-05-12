@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPokemons } from "../../actions";
+import { getPokemons } from "../../actions/index";
 import style from "./form.module.css";
 
 export const Form = () => {
@@ -31,23 +31,23 @@ export const Form = () => {
     const [errors, setErrors] = useState({});
 
     const inputChange = (e) => {
-        if(e.target.name !== 'name'){
-            setData({
-                ...data,
-                [e.target.name]: Number(e.target.value) <= 0 ? 0 : e.target.value,
-            })
-        }else {
-            setErrors(
-                validate({
-                    ...data,
-                    [e.target.name]:e.target.value,
-                })
-            )
-            setData({
-                ...data,
-                [e.target.value]: e.target.value,
-            })
-        }
+      if (e.target.name !== "name") {
+        setData({
+          ...data,
+          [e.target.name]: Number(e.target.value) <= 0 ? 0 : e.target.value,
+        });
+      } else {
+        setErrors(
+          validate({
+            ...data,
+            [e.target.name]: e.target.value,
+          })
+        );
+        setData({
+          ...data,
+          [e.target.name]: e.target.value,
+        });
+      }
     }
 
     const check = (e) => {
@@ -67,7 +67,7 @@ export const Form = () => {
 
     const submit = async (e) => {
         e.preventDefault();
-        const create = await fetch("http://127.0.0.1:3000/pokemons", {
+        const create = await fetch("http://127.0.0.1:3001/pokemons", {
             method: "POST",
             headers: {
               Accept: "application/json",

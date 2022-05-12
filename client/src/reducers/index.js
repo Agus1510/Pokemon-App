@@ -38,6 +38,10 @@ const initialState = {
           ...state,
           order: action.payload,
         };
+        case "DELETE_POKEMON":
+          return {
+            ...state,
+          };
       case "ADD":
         if(state.team.length === 8) state.team.shift();
         return {

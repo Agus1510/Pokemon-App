@@ -1,8 +1,16 @@
 import {React, useEffect} from "react";
-import { Link, NavLink, matchPath, useLocation} from "react-router-dom";
+import { Link, NavLink,  useLocation} from "react-router-dom";
 import style from './navbar.module.css';
 
+var path = "/pokedex/1"
+
 export const Navbar = () => {
+  
+  const location = useLocation();
+  if(location.pathname.includes("pokedex") && location.pathname !== path){
+    path = location.pathname
+  }
+
   useEffect(() => {
     const indicator = document.querySelector("[data-indicator]")
     document.addEventListener("click", e => {
@@ -25,7 +33,7 @@ export const Navbar = () => {
     })
   })
   return (
-    <body>
+    <div>
       <header className={ style.header } >
         <Link to="/" className={ style.logo }>
           <img src="img/logo.png" alt="" />
@@ -37,24 +45,20 @@ export const Navbar = () => {
                 <div className={style.corners}></div>
                 </div>
             <li ><NavLink activeClassName={style.active} to="/home">
-                <div className={style.icon}><img src= "img/home.svg" /></div>
+                <div className={style.icon}><img src= "img/home.svg" alt="home" /></div>
                 <div className={style.text}>Home</div>
                 </NavLink></li>
-              <li ><NavLink activeClassName={style.active} to="/pokedex">
-                <div className={style.icon}><img src= "img/pokedex.svg" /></div>
+              <li ><NavLink activeClassName={style.active} to={{pathname:path}}> 
+                <div className={style.icon}><img src= "img/pokedex.svg" alt="pokedex"/></div>
                 <div className={style.text}>Pokedex</div>
                 </NavLink></li>
             <li ><NavLink activeClassName={style.active} to="/create" >
-            <div className={style.icon}><img src= "img/create.png" /></div>
+            <div className={style.icon}><img src= "img/create.png" alt="create" /></div>
                 <div className={style.text}>Create</div>
                 </NavLink></li>
-            {/* <li ><NavLink  activeClassName={style.active} to="/team" >
-            <div className={style.icon}><img src= "img/team.png" /></div>
-                <div className={style.text}>My team</div>
-                </NavLink></li> */}
         </ul>
         </nav>
       </header>
-    </body>
+    </div>
   );
 };

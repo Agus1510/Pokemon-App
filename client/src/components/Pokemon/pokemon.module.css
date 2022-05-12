@@ -35,13 +35,11 @@
   }
   
   .ima {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 37em;
+    display: table;
+    margin: 1em auto;
   }
 
   .ima img{
-      margin-left: 18em;
   }
   
   .parrafo {

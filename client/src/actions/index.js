@@ -1,3 +1,6 @@
+import axios from "axios";
+import Swal from "sweetalert2";
+
 export const getTypes = () => async (dispatch) => {
     const response = await fetch("http://localhost:3001/types");
     console.log(response);
@@ -60,3 +63,25 @@ export const getTypes = () => async (dispatch) => {
       payload: pokemon,
     });
   };
+
+  export function deletePokemon(id) {
+    return function (dispatch) {
+      return axios
+        .delete(`/pokedex/${id}`)
+        .then((response) => {
+          Swal.fire({
+            icon: "success",
+            title: "Ok",
+            text: "Pokemon deleted correctly!",
+          });
+          return dispatch({ type: "DELETE_POKEMON" });
+        })
+        .catch((e) => {
+          return Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            html: "Something went wrong!<br> Please try again",
+          });
+        });
+    };
+  }

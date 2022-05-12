@@ -1,8 +1,10 @@
 
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import style from "./pokemon.module.css";
 import Stats from "../stats"
+import { deletePokemon, getPokemons } from "../../actions";
 
 export const Pokemon = () => {
   const { id } = useParams();
@@ -10,19 +12,9 @@ export const Pokemon = () => {
 
   const [pokemon, setPokemon] = useState({});
 
-  const addTeam = (obj) => {
-    let array = [];
-    if (localStorage.getItem("team")) {
-      array = localStorage.getItem("team");
-      array = JSON.parse(array);
-      if (array.length >= 8) array.shift();
-      array.push(obj);
-      localStorage.setItem("team", JSON.stringify(array));
-    } else {
-      array.push(obj);
-      localStorage.setItem("team", JSON.stringify(array));
-    }
-    history.push("/team");
+  const dispatch = useDispatch();
+  const handleDelete = (id) => {
+    dispatch(deletePokemon(id));
   };
 
   useEffect(() => {
@@ -39,28 +31,9 @@ export const Pokemon = () => {
   return (
     <>
       <div className={style.container}>
+        <button onClick={handleDelete}>X</button>
         <h1>{pokemon.name}</h1>
         <h2>#{pokemon.id}</h2>
-
-        {/* <div class={style.pokebola}>
-          <p>Capturar</p>
-          <button
-            onClick={() => {
-              addTeam({
-                id: pokemon.id,
-                name: pokemon.name,
-                type: pokemon.type,
-                img: pokemon.img,
-              });
-            }}
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png"
-              alt=""
-            />
-          </button>
-        </div> */}
-
         <div className={style.ima}>
           <img src={pokemon.img} alt="" />
           <div className={style.parrafo}>

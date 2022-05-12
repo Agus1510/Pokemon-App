@@ -16,7 +16,7 @@ export const Pokedex = () => {
   const [page, setPage] = useState(0);
 
   const pagination = () => {
-    if (pokemons.length) return pokemons.slice(page, page + 9);
+    if (pokemons.length) return pokemons.slice(page, page + 12);
     if (pokemons.info) return pokemons;
     return [];
   };
@@ -24,14 +24,14 @@ export const Pokedex = () => {
   const array = pagination();
 
   const nextPage = () => {
-    if (pokemons.length > page + 9) {
-      setPage(page + 9);
+    if (pokemons.length > page + 12) {
+      setPage(page + 12);
     }
   };
 
   const previousPage = () => {
     if (page > 0) {
-      setPage(page - 9);
+      setPage(page - 12);
     }
   };
 
