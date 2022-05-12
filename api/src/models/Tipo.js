@@ -1,7 +1,7 @@
 const { DataTypes, NUMBER } = require('sequelize');
 
 module.exports = sequelize => {
-    sequelize.define('Type', {
+    sequelize.define('tipo', {
         slot: {
             type: DataTypes.INTEGER,
             primaryKey: true,

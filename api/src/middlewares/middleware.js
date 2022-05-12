@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 const { Pokemon, Tipo } = require("../db.js");
 
-const getInfo = async (by) => {
+const info = async (by) => {
   const api = await fetch("https://pokeapi.co/api/v2/pokemon?limit=40");
   const data = await api.json();
   const bd = await Pokemon.findAll({ include: Tipo });
@@ -40,12 +40,10 @@ const getInfo = async (by) => {
       });
     }
   }
-  // const poke = await Pokemon.findAll({ include: Tipo });
-  // pokemonInfo.push({ ...poke });
   return pokemonInfo;
 };
 
-const getName = async (name) => {
+const forName = async (name) => {
   try {
     const db = await Pokemon.findOne({
       where: {
@@ -83,7 +81,7 @@ const getName = async (name) => {
   }
 };
 
-const getId = async (id) => {
+const forId = async (id) => {
   try {
     const api = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await api.json();
@@ -126,7 +124,7 @@ const getId = async (id) => {
 };
 
 module.exports = {
-  getInfo,
-  getName,
-  getId,
+  info,
+  forName,
+  forId,
 };
