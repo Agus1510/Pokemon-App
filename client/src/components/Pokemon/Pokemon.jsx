@@ -1,44 +1,46 @@
 
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams, useLocation} from "react-router-dom";
 import style from "./pokemon.module.css";
 import Stats from "../stats"
-import { deletePokemon, getPokemons } from "../../actions";
+import { deletePokemon, getPokemons} from "../../actions";
 
 export const Pokemon = () => {
   const { id } = useParams();
-  const history = useHistory();
-
+  const location = useLocation();
+  const showButton = () => {
+    return (location.pathname.includes("-"));
+  }
   const [pokemon, setPokemon] = useState({});
 
   const dispatch = useDispatch();
   const handleDelete = (id) => {
     dispatch(deletePokemon(id));
+    dispatch(getPokemons());
+
   };
 
   useEffect(() => {
-    detalles();
-  }, []);
+    details();
+  }, );
 
-  const detalles = async () => {
+  const details = async () => {
     const data = await fetch(`http://localhost:3001/pokemons/${id}`);
 
     const pokemon = await data.json();
     setPokemon(pokemon);
   };
-
   return (
     <>
       <div className={style.container}>
-        <button onClick={handleDelete}>X</button>
-        <h1>{pokemon.name}</h1>
-        <h2>#{pokemon.id}</h2>
+        <button onClick={() => handleDelete(id)} style={showButton() ? {display:'flex', marginLeft:'90em', color:'white', backgroundColor:'red', borderRadius:'20%'} : {display:'none'}}>X</button>
+        <h1>{pokemon.name} #{pokemon.id}</h1>
         <div className={style.ima}>
           <img src={pokemon.img} alt="" />
           <div className={style.parrafo}>
-            <p>peso: {pokemon.weight /10}kg</p>
-            <p>altura: {pokemon.height / 10}m</p>
+            <p>Weight: {pokemon.weight /10}kg</p>
+            <p>Height: {pokemon.height / 10}m</p>
           </div>
         </div>
 
@@ -50,11 +52,11 @@ export const Pokemon = () => {
         <div className={style.meter}>
           <div className={style.type}>
             <Stats valor={pokemon.vida} nombre={"HP"} />
-            <Stats valor={pokemon.fuerza} nombre={"Fuerza"} />
+            <Stats valor={pokemon.fuerza} nombre={"Strenght"} />
           </div>
           <div className={style.type}>
-            <Stats valor={pokemon.defensa} nombre={"Defensa"} />
-            <Stats valor={pokemon.velocidad} nombre={"Velocidad"} />
+            <Stats valor={pokemon.defensa} nombre={"Defense"} />
+            <Stats valor={pokemon.velocidad} nombre={"Speed"} />
           </div>
         </div>
       </div>

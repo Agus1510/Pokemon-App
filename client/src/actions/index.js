@@ -1,48 +1,49 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-export const getTypes = () => async (dispatch) => {
-    const response = await fetch("http://localhost:3001/types");
+export function getTypes() {return async (dispatch) => {
+    const response = await axios.get("http://localhost:3001/types");
     console.log(response);
-    const data = await response.json();
+    const data = await response.data;
     console.log(data);
     dispatch({
       type: "GET_TYPE",
       payload: data,
     });
   };
-  
-  export const getPokemons = () => async (dispatch) => {
-    const response = await fetch(`http://localhost:3001/pokemons`);
-    const data = await response.json();
-    dispatch({
+} 
+  export function getPokemons(){ return async (dispatch) => {
+    const response = await axios.get(`http://localhost:3001/pokemons`);
+    const data = await response.data;
+      dispatch({
       type: "GET_POKEMONS",
       payload: data,
     });
   };
+};
   
-  export const getByName = (name) => async (dispatch) => {
-    const response = await fetch(
+  export function getByName(name){ return async (dispatch) => {
+    const response = await axios.get(
       `http://localhost:3001/pokemons?name=${name}`
     );
-    const data = await response.json();
+    const data = await response.data;
     dispatch({
       type: "GET_NAME",
       payload: data,
     });
   };
-  
-  export const filters = (num) => async (dispatch) => {
-    const response = await fetch(
+}; 
+  export function filters(num) {return async (dispatch) => {
+    const response = await axios.get(
       `http://localhost:3001/pokemons?by=${num}`
     );
-    const data = await response.json();
+    const data = await response.data;
     dispatch({
       type: "FILTER",
       payload: data,
     });
   };
-  
+}; 
   export const type = (type) => (dispatch) => {
     dispatch({
       type: "BY_TYPE",
@@ -57,23 +58,18 @@ export const getTypes = () => async (dispatch) => {
     });
   };
   
-  export const add = (pokemon) => (dispatch) => {
-    dispatch({
-      type: "ADD",
-      payload: pokemon,
-    });
-  };
-
   export function deletePokemon(id) {
     return function (dispatch) {
       return axios
-        .delete(`/pokedex/${id}`)
+        .delete(`http://localhost:3001/pokemons/${id}`)
         .then((response) => {
           Swal.fire({
             icon: "success",
             title: "Ok",
             text: "Pokemon deleted correctly!",
-          });
+          }).then(function() {
+            window.location = "http://localhost:3000/home";
+        });
           return dispatch({ type: "DELETE_POKEMON" });
         })
         .catch((e) => {

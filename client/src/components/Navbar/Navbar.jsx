@@ -6,11 +6,15 @@ var path = "/pokedex/1"
 
 export const Navbar = () => {
   
+  // Guarda el ultimo link que incluya "pokedex" para redireccionar el boton de pokedex al ultimo pokemon visto
   const location = useLocation();
   if(location.pathname.includes("pokedex") && location.pathname !== path){
     path = location.pathname
   }
+ 
+  const reload = performance.getEntriesByType("navigation")[0].type;
 
+  //Script para mover el circulo negro del nav
   useEffect(() => {
     const indicator = document.querySelector("[data-indicator]")
     document.addEventListener("click", e => {

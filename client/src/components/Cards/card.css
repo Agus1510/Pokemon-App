@@ -57,21 +57,23 @@ img {
   
   .cardCaption {
     background-color: rgba(255, 255, 255, 0.65);
-    padding: 1em;
     position: relative;
     border-radius: 0 0 3px 3px;
+
   }
   
   .cardImageContainer {
     background-color: rgba(255, 255, 255, 0.7);
+    align-items: center;
     text-align: center;
-    padding: 1em 1em 0;
+    padding-top: 0.5em;
     border-radius: 3px 3px 0 0;
   }
+
   
   .cardType {
     position: relative;
-    top: -50px;
+    top: -0.1em;
     transform: translateY(-50%);
     color: #f2f2f2;
     text-transform: uppercase;
@@ -80,6 +82,7 @@ img {
     line-height: 1;
     border-radius: 0.3em;
     background: #bbbbbb;
+
   }
   
   .cardName {
@@ -89,6 +92,7 @@ img {
     letter-spacing: 0.02em;
     color: rgb(46, 46, 46);
     padding-top: 1em;
+    padding-bottom: 1em;
   }
   
   .types {

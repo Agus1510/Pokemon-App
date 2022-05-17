@@ -7,7 +7,7 @@
     align-items: center;
     text-align: center;
     height: 100vh;
-    background-image: url("./fondo.jpg");
+    background-image: url("https://wallpaperaccess.com/full/3952024.png");
     background-size: cover;
   }
   
@@ -20,7 +20,13 @@
   }
   
   h1{
-    font-family: 'Roboto Condensed', sans-serif;;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 1em;
+    color: black;
+  }
+
+  .column{
+
   }
 
   .form {
@@ -32,22 +38,29 @@
     background-color: #f2f2f2;
     border-radius: 40px;
     margin-top: 80px;
+    vertical-align: top;
   }
   
   .separado {
+    display: inline-block;
     padding-right: 100px;
     color: rgb(34, 31, 31);
+    columns: 2;
+    column-gap: 5em;
+    break-inside: avoid;
+    -moz-columns: 2;
+    -webkit-columns: 2;
+    -webkit-break-inside: avoid;
   }
-  
+
   .tipos {
     display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+    justify-content: space-around;
     color: rgb(34, 31, 31) ;
+    padding-top: 5em;
   }
   
   .tipos label {
-    margin-top: 100px;
   }
   
   .hiddenCB div {
@@ -59,7 +72,7 @@
 
   .hiddenCB h1{
     color: rgb(34, 31, 31) ;
-    font-family: 'Roboto Condensed', sans-serif;;
+    font-family: 'Roboto Condensed', sans-serif;
   }
   
   .hiddenCB input[type="checkbox"],
@@ -89,16 +102,28 @@
     position: relative;
     padding: 5px 0;
   }
-  
+  .question2 {
+    position: relative;
+    padding: 5px 0;
+    padding-top: 1.2109em;
+
+  }
+
   .question:first-of-type {
-    padding-top: 0;
   }
   
   .question:last-of-type {
-    padding-top: 0;
   }
   
   .question label {
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .question2 label {
     font-weight: 100;
     letter-spacing: 0.01em;
     font-size: 17px;
@@ -154,6 +179,29 @@
     background: rgba(255, 244, 196, 0.767);
     color: rgb(77, 76, 76);
   }
+
+  form .question2 input {
+    appearance: none;
+    text-align: center;
+    background-color: none;
+    border: 1px solid rgba(71, 62, 62, 0.815);
+    line-height: 0;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    z-index: 1;
+  }
+  
+  .question2 input:focus {
+    outline: none;
+    background: rgba(255, 244, 196, 0.767);
+    color: rgb(77, 76, 76);
+  }
   
   .submit {
     margin-top: 200px;
@@ -167,4 +215,7 @@
     border-radius: 40px;
   }
 
-  
+  .preview{
+    height: 108px;
+    width: 190px;
+  }

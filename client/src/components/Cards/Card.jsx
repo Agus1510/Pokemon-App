@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./card.css";
 
+
+
+
 export const Card = ({ array, img }) => {
+
   return (
     <>
       <div className="container">
@@ -14,7 +18,7 @@ export const Card = ({ array, img }) => {
                   <img src={p.img} alt="" className="CardImage" />
                 </div>
                 <figcaption className="cardCaption">
-                  <h1 className="cardName">#{p.idPoke ? `${p.idPoke}H` : p.id}-{p.name}</h1>
+                  <h1 className="cardName" key={p.name}>#{p.idPoke ? `${p.idPoke}B` : p.id}-{p.name}</h1>
                   {p.type.length === 2 ? (
                     <div className="types">
                       <h3 className="cardType">{p.type[0]}</h3>

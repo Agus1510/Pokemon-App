@@ -5,6 +5,17 @@ import { getPokemons } from "../../actions/index";
 import style from "./form.module.css";
 
 export const Form = () => {
+
+  window.onbeforeunload = (event) => { // Avisa que vas a recargar la pagina.
+    const e = event || window.event;
+    // Cancel the event
+    e.preventDefault();
+    if (e) {
+      e.returnValue = '';
+    }
+    return ''; 
+  };
+
     const dispatch = useDispatch();
     const options = useSelector((store) => store.types);
 
@@ -25,6 +36,7 @@ export const Form = () => {
         velocidad: 0,
         altura: 0,
         peso: 0,
+        img: "",
         tipos: [],
     })
 
@@ -32,11 +44,17 @@ export const Form = () => {
 
     const inputChange = (e) => {
       if (e.target.name !== "name") {
+        if(e.target.name === "peso" || e.target.name ==="altura"){
+          setData({
+            ...data,
+            [e.target.name]: Number(e.target.value) <=0 ? 0 : (e.target.value * 10), //La api usa la altura en decimetros y el peso en hectogramos, por eso multiplico por 10.
+          });
+        } else{
         setData({
           ...data,
           [e.target.name]: Number(e.target.value) <= 0 ? 0 : e.target.value,
         });
-      } else {
+      }} else {
         setErrors(
           validate({
             ...data,
@@ -85,14 +103,16 @@ export const Form = () => {
             velocidad: 0,
             altura: 0,
             peso: 0,
+            img: "",
             tipos: [],
         })
     }
     return (
         <div className={style.containerCreate}>
           <form action="POST" className={style.form} onSubmit={submit}>
+           <div className={style.column}>
+            <h1>Create your own Pokemon</h1>
             <div className={style.separado}>
-              <h1>Create your own Pokemon</h1>
               <p className={errors.name ? style.danger : style.question}>
                 <label>Pokemon name</label>
                 <input
@@ -132,7 +152,7 @@ export const Form = () => {
                   onChange={inputChange}
                 />
               </p>
-              <p className={style.question}>
+              <p className={style.question2}>
                 <label>Speed</label>
                 <input
                   type="number"
@@ -146,7 +166,7 @@ export const Form = () => {
                 <input
                   type="number"
                   name="altura"
-                  value={data.altura}
+                  value={data.altura /10} //Se divide por 10, porque antes de multiplica por 10 para guardar en la DB.
                   onChange={inputChange}
                 />
               </p>
@@ -155,12 +175,26 @@ export const Form = () => {
                 <input
                   type="number"
                   name="peso"
-                  value={data.peso}
+                  value={data.peso /10} //Se divide por 10, porque antes de multiplica por 10 para guardar en la DB.
                   onChange={inputChange}
                 />
               </p>
+              <p className={style.question}>
+                <label>Image</label>
+                <input
+                  type="text"
+                  placeholder="Enter image link..."
+                  name="img"
+                  value={data.img}
+                  onChange={inputChange}
+                  required
+                />
+              </p>
             </div>
-    
+            <div>
+            <img src={data.img} onError={(e)=>{e.target.onerror = null; e.target.src="http://joshcroyle.com/wp-content/uploads/2019/01/Logo-Menu.png"}}/>
+            </div>
+            </div>
             <div className={style.hiddenCB}>
               <h1>Types</h1>
               <div className={style.tipos}>

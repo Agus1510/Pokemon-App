@@ -21,11 +21,19 @@
       cursor: pointer;
   }
 
+ .boton {
+   display: flex;
+   margin-left: 10em;
+   color: white;
+   background-color: red;
+ }
   
   .container h1 {
     font-weight: 800;
     font-size: 3.5em;
     text-transform: uppercase;
+    color:  white;
+    margin-bottom: 0.3em;
   }
   
   .container h2 {

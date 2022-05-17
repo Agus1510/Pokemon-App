@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const { Pokemon, Tipo } = require("../db.js");
-const { info, forName, forId } = require("../middlewares/middleware.js");
+const { info, byName, byID } = require("../middlewares/middleware.js");
 
 const router = Router();
 
@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
   let pokemonInfo = [];
   if (name) {
     name = name.toLowerCase();
-    pokemonInfo = await forName(name);
+    pokemonInfo = await byName(name);
     if (!pokemonInfo.length)
       return res.json({ info: "Cant find that Pokemon" });
     return res.json(pokemonInfo);
@@ -23,13 +23,13 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
-  const pokemonInfo = await forId(id);
+  const pokemonInfo = await byID(id);
   if (!pokemonInfo.id) return res.json({ info: "Cant find that pokemon" });
   res.json(pokemonInfo);
 });
 
 router.post("/", async (req, res) => {
-  let { name, vida, fuerza, defensa, velocidad, altura, peso, tipos } =
+  let { name, vida, fuerza, defensa, velocidad, altura, peso, img, tipos } =
     req.body;
   if (
     isNaN(vida) ||
@@ -42,6 +42,7 @@ router.post("/", async (req, res) => {
     return res.json({ info: "Some of the arguments are not a number" });
 
   if (!name) return res.json({ info: "Name is required" });
+  if (!img) return res.json({ info: "Image is required" });
 
   const existe = await Pokemon.findOne({ where: { name: name } });
   if (existe) return res.json({ info: "Pokemon already exists" });
@@ -54,15 +55,16 @@ router.post("/", async (req, res) => {
     velocidad: Number(velocidad),
     altura: Number(altura),
     peso: Number(peso),
+    img: img.toLowerCase(),
   });
 
   if (!tipos.length) tipos = [1];
 
   await pokemon.setTipos(tipos);
-  res.json({ info: "Pokemon created successfully" });
+  res.json({info:"Pokemon created successfully"});
 });
 
-router.delete("/pokedex/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const pokemon = await Pokemon.findByPk(id);

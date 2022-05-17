@@ -34,6 +34,10 @@ module.exports = (sequelize) => {
     },
     peso: {
       type: DataTypes.DECIMAL
+    },
+    img: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
   });
 };

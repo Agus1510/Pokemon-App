@@ -36,14 +36,14 @@ const info = async (by) => {
         name: base[i].name,
         type: base[i].tipos.map((t) => t.name),
         fuerza: base[i].fuerza,
-        img: "https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif",
+        img: base[i].img,
       });
     }
   }
   return pokemonInfo;
 };
 
-const forName = async (name) => {
+const byName = async (name) => {
   try {
     const db = await Pokemon.findOne({
       where: {
@@ -81,7 +81,7 @@ const forName = async (name) => {
   }
 };
 
-const forId = async (id) => {
+const byID = async (id) => {
   try {
     const api = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await api.json();
@@ -108,7 +108,7 @@ const forId = async (id) => {
       id: db.idPoke,
       name: db.name,
       type: db.tipos.map((t) => t.name),
-      img: "https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif",
+      img: db.img,
       vida: db.vida,
       fuerza: db.fuerza,
       defensa: db.defensa,
@@ -125,6 +125,6 @@ const forId = async (id) => {
 
 module.exports = {
   info,
-  forName,
-  forId,
+  byName,
+  byID,
 };

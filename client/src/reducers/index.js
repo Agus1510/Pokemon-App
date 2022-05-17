@@ -42,12 +42,6 @@ const initialState = {
           return {
             ...state,
           };
-      case "ADD":
-        if(state.team.length === 8) state.team.shift();
-        return {
-          ...state,
-          team: [...state.team, action.payload]
-        };
       default:
         return state;
     }

@@ -5,7 +5,7 @@ import { Search } from "../../components/Search/Search";
 import { useSelector } from "react-redux";
 import { ordered, tipos } from "../../components/filters";
 
-export const Pokedex = () => {
+export const Home = () => {
   let pokemons = useSelector((store) => store.pokemons);
   const type = useSelector((store) => store.type);
   const order = useSelector((store) => store.order);
