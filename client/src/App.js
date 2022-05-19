@@ -43,10 +43,10 @@ function App() {
         <LandingPage />
       </Route>
         <Route>
-          <Navbar />
             <Route exact path="/home">
             <Home />
             </Route>
+            <Navbar />
       <Route exact path="/create">
         <Create />
       </Route>

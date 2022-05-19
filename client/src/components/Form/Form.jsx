@@ -1,23 +1,26 @@
 
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { getPokemons } from "../../actions/index";
 import style from "./form.module.css";
+import Alert from "../Alert/alert";
 
 export const Form = () => {
 
-  window.onbeforeunload = (event) => { // Avisa que vas a recargar la pagina.
-    const e = event || window.event;
-    // Cancel the event
-    e.preventDefault();
-    if (e) {
-      e.returnValue = '';
-    }
-    return ''; 
-  };
+  // window.onbeforeunload = (event) => { // Avisa que vas a recargar la pagina.
+  //   const e = event || window.event;
+  //   // Cancel the event
+  //   e.preventDefault();
+  //   if (e) {
+  //     e.returnValue = '';
+  //   }
+  //   return ''; 
+  // };
 
     const dispatch = useDispatch();
     const options = useSelector((store) => store.types);
+
+    const [btnAlert, setBtnAlert]= useState(false);
 
     const validate = (input) => {
         let errors ={};
@@ -106,6 +109,7 @@ export const Form = () => {
             img: "",
             tipos: [],
         })
+        setBtnAlert(true);
     }
     return (
         <div className={style.containerCreate}>
@@ -215,6 +219,10 @@ export const Form = () => {
               </div>
             </div>
           </form>
+          <Alert trigger={btnAlert} setTrigger={setBtnAlert}>
+          <img src="https://s8.gifyu.com/images/check-green.gif" alt="gif"></img>
+          <h3>Pokemon created Successfully</h3>
+        </Alert>
         </div>
       );
 

@@ -3,17 +3,15 @@ import { Link, NavLink,  useLocation} from "react-router-dom";
 import style from './navbar.module.css';
 
 var path = "/pokedex/1"
-
 export const Navbar = () => {
   
   // Guarda el ultimo link que incluya "pokedex" para redireccionar el boton de pokedex al ultimo pokemon visto
   const location = useLocation();
+  const oldIndex = localStorage.getItem("ind")
+
   if(location.pathname.includes("pokedex") && location.pathname !== path){
     path = location.pathname
   }
- 
-  const reload = performance.getEntriesByType("navigation")[0].type;
-
   //Script para mover el circulo negro del nav
   useEffect(() => {
     const indicator = document.querySelector("[data-indicator]")
@@ -28,14 +26,20 @@ export const Navbar = () => {
       if (anchor != null) {
         const allAnchors = [...document.querySelectorAll("a")]
         const index = allAnchors.indexOf(anchor)
-        if (index > 0 && index <5){
-        indicator.style.setProperty("--position", index-1)
-        } else{
+         if (index === 13){
+          localStorage.setItem('ind', 0);
+        indicator.style.setProperty("--position", 0)
+        }else if(index >=0 && index < 5){
+          localStorage.setItem('ind', index-1);
+          indicator.style.setProperty("--position", index-1)
+        }else {
+          indicator.style.setProperty("--position", 1)
           indicator.style.setProperty("--position", 1)
         }
-      }
+      } 
     })
   })
+
   return (
     <div>
       <header className={ style.header } >
@@ -45,7 +49,7 @@ export const Navbar = () => {
         <script src="script.js" defer></script>
         <nav className={style.navbar_container}>
         <ul className ={style.list}>
-            <div data-indicator className={style.indicator}>
+            <div data-indicator className={style.indicator} style={{"--position": oldIndex}}>
                 <div className={style.corners}></div>
                 </div>
             <li ><NavLink activeClassName={style.active} to="/home">
