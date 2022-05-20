@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState} from "react";
+import React, { useCallback, useEffect, useState} from "react";
 import { useDispatch } from "react-redux";
 import { useParams, useLocation} from "react-router-dom";
 import style from "./pokemon.module.css";
@@ -38,15 +38,15 @@ export const Pokemon = () => {
     }
   };
 
-  const details = async () => {
+  const details = useCallback(async () => {
     const response = await fetch(`http://localhost:3001/pokemons/${id}`);
     const data = await response.json();
     setPokemon(() => data);
-  };
+  },[id])
   
   useEffect(() => {
     details();
-  },[]);
+  },[details]);
 
   return (
     <>
@@ -77,7 +77,7 @@ export const Pokemon = () => {
           </div>
         </div>
         <Alert trigger={btnAlert} setTrigger={setBtnAlert}>
-          <img src="https://s8.gifyu.com/images/check-green.gif" alt="gif"></img>
+          <img src="https://s8.gifyu.com/images/check-greenadc54c8c906856d6.gif" alt="gif"></img>
           <h3>Pokemon deleted Successfully</h3>
         </Alert>
         <Alert trigger={btnAlertErr} setTrigger={setBtnAlertErr}>

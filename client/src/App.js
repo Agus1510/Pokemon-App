@@ -35,21 +35,21 @@ function App() {
 
   return (
     <>
-      <Route exact path="/pokedex/:id" >
-        <Pokemon />
-      </Route>
       <Switch>
       <Route exact path="/">
         <LandingPage />
       </Route>
         <Route>
-            <Route exact path="/home">
+        <Navbar />
+        <Route exact path="/home">
             <Home />
-            </Route>
-            <Navbar />
-      <Route exact path="/create">
-        <Create />
-      </Route>
+        </Route>
+        <Route exact path="/create">
+           <Create />
+        </Route>
+        <Route exact path="/pokedex/:id" >
+           <Pokemon />
+        </Route>
       </Route>
       </Switch>
     </>

@@ -33,12 +33,12 @@ export const Form = () => {
 
     const [data, setData] = useState({
         name: "",
-        vida: 0,
-        fuerza: 0,
-        defensa: 0,
-        velocidad: 0,
-        altura: 0,
-        peso: 0,
+        vida: "",
+        fuerza: "",
+        defensa: "",
+        velocidad: "",
+        altura: "",
+        peso: "",
         img: "",
         tipos: [],
     })
@@ -50,7 +50,7 @@ export const Form = () => {
         if(e.target.name === "peso" || e.target.name ==="altura"){
           setData({
             ...data,
-            [e.target.name]: Number(e.target.value) <=0 ? 0 : (e.target.value * 10), //La api usa la altura en decimetros y el peso en hectogramos, por eso multiplico por 10.
+            [e.target.name]: Number(e.target.value) <=0 ? 0 :(e.target.value * 10), //La api usa la altura en decimetros y el peso en hectogramos, por eso multiplico por 10.
           });
         } else{
         setData({
@@ -88,24 +88,24 @@ export const Form = () => {
 
     const submit = async (e) => {
         e.preventDefault();
-        const create = await fetch("http://127.0.0.1:3001/pokemons", {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        })
+        // const create = await fetch("http://127.0.0.1:3001/pokemons", {
+        //     method: "POST",
+        //     headers: {
+        //       Accept: "application/json",
+        //       "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(data),
+        // })
         dispatch(getPokemons());
-        const response = await create.json();
+        // const response = await create.json();
         setData({
             name: "",
-            vida: 0,
-            fuerza: 0,
-            defensa: 0,
-            velocidad: 0,
-            altura: 0,
-            peso: 0,
+            vida: "",
+            fuerza: "",
+            defensa: "",
+            velocidad: "",
+            altura: "",
+            peso: "",
             img: "",
             tipos: [],
         })
@@ -134,6 +134,7 @@ export const Form = () => {
                 <input
                   type="number"
                   name="vida"
+                  placeholder="0"
                   value={data.vida}
                   onChange={inputChange}
                 />
@@ -143,6 +144,7 @@ export const Form = () => {
                 <input
                   type="number"
                   name="fuerza"
+                  placeholder="0"
                   value={data.fuerza}
                   onChange={inputChange}
                 />
@@ -152,6 +154,7 @@ export const Form = () => {
                 <input
                   type="number"
                   name="defensa"
+                  placeholder="0"
                   value={data.defensa}
                   onChange={inputChange}
                 />
@@ -161,6 +164,7 @@ export const Form = () => {
                 <input
                   type="number"
                   name="velocidad"
+                  placeholder="0"
                   value={data.velocidad}
                   onChange={inputChange}
                 />
@@ -170,7 +174,7 @@ export const Form = () => {
                 <input
                   type="number"
                   name="altura"
-                  value={data.altura /10} //Se divide por 10, porque antes de multiplica por 10 para guardar en la DB.
+                  value={data.altura/10} //Se divide por 10, porque antes de multiplica por 10 para guardar en la DB.
                   onChange={inputChange}
                 />
               </p>
@@ -179,7 +183,7 @@ export const Form = () => {
                 <input
                   type="number"
                   name="peso"
-                  value={data.peso /10} //Se divide por 10, porque antes de multiplica por 10 para guardar en la DB.
+                  value={data.peso/10} //Se divide por 10, porque antes de multiplica por 10 para guardar en la DB.
                   onChange={inputChange}
                 />
               </p>
@@ -196,7 +200,7 @@ export const Form = () => {
               </p>
             </div>
             <div>
-            <img src={data.img} onError={(e)=>{e.target.onerror = null; e.target.src="http://joshcroyle.com/wp-content/uploads/2019/01/Logo-Menu.png"}}/>
+            <img src={data.img} alt="img" onError={(e)=>{e.target.onerror = null; e.target.src="http://joshcroyle.com/wp-content/uploads/2019/01/Logo-Menu.png"}}/>
             </div>
             </div>
             <div className={style.hiddenCB}>
@@ -220,7 +224,7 @@ export const Form = () => {
             </div>
           </form>
           <Alert trigger={btnAlert} setTrigger={setBtnAlert}>
-          <img src="https://s8.gifyu.com/images/check-green.gif" alt="gif"></img>
+          <img src="https://s8.gifyu.com/images/check-greenadc54c8c906856d6.gif" alt="gif"></img>
           <h3>Pokemon created Successfully</h3>
         </Alert>
         </div>

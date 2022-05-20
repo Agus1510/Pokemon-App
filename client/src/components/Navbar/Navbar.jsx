@@ -44,7 +44,7 @@ export const Navbar = () => {
     <div>
       <header className={ style.header } >
         <Link to="/" className={ style.logo }>
-          <img src="img/logo.png" alt="" />
+          <img src="/img/logo.png" alt="" />
         </Link>
         <script src="script.js" defer></script>
         <nav className={style.navbar_container}>
@@ -53,15 +53,15 @@ export const Navbar = () => {
                 <div className={style.corners}></div>
                 </div>
             <li ><NavLink activeClassName={style.active} to="/home">
-                <div className={style.icon}><img src= "img/home.svg" alt="home" /></div>
+                <div className={style.icon}><img src= "/img/home.svg" alt="home" /></div>
                 <div className={style.text}>Home</div>
                 </NavLink></li>
               <li ><NavLink activeClassName={style.active} to={{pathname:path}}> 
-                <div className={style.icon}><img src= "img/pokedex.svg" alt="pokedex"/></div>
+                <div className={style.icon}><img src= "/img/pokedex.svg" alt="pokedex"/></div>
                 <div className={style.text}>Pokedex</div>
                 </NavLink></li>
             <li ><NavLink activeClassName={style.active} to="/create" >
-            <div className={style.icon}><img src= "img/create.png" alt="create" /></div>
+            <div className={style.icon}><img src= "/img/create.png" alt="create" /></div>
                 <div className={style.text}>Create</div>
                 </NavLink></li>
         </ul>
