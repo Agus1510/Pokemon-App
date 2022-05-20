@@ -39,7 +39,7 @@ export const Pokemon = () => {
   };
 
   const details = useCallback(async () => {
-    const response = await fetch(`http://localhost:3001/pokemons/${id}`);
+    const response = await fetch(`https://agus-pokemon.herokuapp.com/${id}`);
     const data = await response.json();
     setPokemon(() => data);
   },[id])
