@@ -231,7 +231,15 @@
 
   @media (max-width: 500px){
     .container{
-      width: 90vw;
-      height: 80vh;
+      width: 100vw;
+      height: 100vh;
+    }
+    meter {
+      width: 50px;
+      height: 15px;
+      margin: 10px 20px;
+    }
+    .type{
+      font-size: 3rem;
     }
   }
