@@ -24,7 +24,7 @@ export const Pokemon = () => {
   const dispatch = useDispatch();
   
   const getResponse = async(id) =>{               // Trae la respuesta del dispatch 
-    const res = await dispatch(deletePokemon(id))//(Para saber cuando tiene un error y cambiar la alerta
+    const res = await dispatch(deletePokemon(id))//(Para saber cuando tiene un error y cambiar la alerta)
     const data = await res;
     return (JSON.stringify(data));
   };
