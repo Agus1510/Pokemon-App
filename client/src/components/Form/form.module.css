@@ -223,6 +223,7 @@
   @media (max-width : 700px){
     .form {
       padding: 30px 25px;
+      margin-top: 5em;
     }
     
     .separado {
