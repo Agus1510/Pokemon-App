@@ -175,9 +175,9 @@ body {
   .header{
   }
   .header .logo img {
-    width: 80px;
-    height: 35px;
-    margin-left: 1em;
+    width: 75px;
+    height: 30px;
+    margin-left: 0em;
     margin-top: 3em;
   }
 
