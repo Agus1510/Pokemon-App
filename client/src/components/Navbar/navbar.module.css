@@ -174,7 +174,6 @@ body {
 @media (max-width : 390px){
   .header{
     align-items: flex-start;
-    width: 100vh;
   }
   .header .logo img {
     width: 120px;
