@@ -225,6 +225,11 @@
   }
 
   @media (max-width : 500px){
+
+    .containerCreate{
+
+      background-image: url("");
+    }
     .form {
       margin-top: 15em;
       width: 80vw;
