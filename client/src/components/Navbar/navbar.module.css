@@ -175,9 +175,10 @@ body {
   .header{
   }
   .header .logo img {
-    width: 60px;
-    height: 20px;
-    margin-left: 2em;
+    width: 80px;
+    height: 35px;
+    margin-left: 1em;
+    margin-top: 3em;
   }
 
 }

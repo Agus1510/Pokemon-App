@@ -230,6 +230,10 @@
 
       background-image: url("");
     }
+
+    h1{
+      font-size: 2rem;
+    }
     .form {
       margin-top: 15em;
       width: 80vw;
@@ -247,5 +251,9 @@
     .logo{
       height: 10%;
       width: 20%;
+    }
+
+    .hiddenCB div{
+      display: flex;
     }
   }
