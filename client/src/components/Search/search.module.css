@@ -75,16 +75,19 @@
       width: 60%;
     }
     .button{
-      width: 40%;
+      width: 20%;
 
     }
     .button0{
-      width: 40%;
+      width: 30%;
     }
     .button1{
-      width: 40%;
+      width: 30%;
     }
     .button2{
-      width: 40%;
+      width: 30%;
+    }
+    option{
+      font-size: 6px;
     }
   }
