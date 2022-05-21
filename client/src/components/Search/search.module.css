@@ -72,7 +72,8 @@
 
   @media (max-width : 500px){
     .field input{
-      width: 6em;
+      width: 8em;
+      box-shadow: 0;
     }
     .button{
       width: 20%;
@@ -86,8 +87,5 @@
     }
     .button2{
       width: 35%;
-    }
-    option{
-      font-size: 4px;
     }
   }
