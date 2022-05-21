@@ -71,10 +71,20 @@
   }
 
   @media (max-width : 500px){
-    .field{
-      width: 20vw;
+    .field input{
+      width: 30%;
     }
-    .field2{
-      width: 20vw;
+    .button{
+      width: 20%;
+
+    }
+    .button0{
+      width: 20%;
+    }
+    .button1{
+      width: 20%;
+    }
+    .button2{
+      width: 20%;
     }
   }
