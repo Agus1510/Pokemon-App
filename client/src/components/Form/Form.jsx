@@ -199,7 +199,7 @@ export const Form = () => {
                 />
               </p>
             </div>
-            <div>
+            <div className={style.logo}>
             <img src={data.img} alt="img" onError={(e)=>{e.target.onerror = null; e.target.src="http://joshcroyle.com/wp-content/uploads/2019/01/Logo-Menu.png"}}/>
             </div>
             </div>
