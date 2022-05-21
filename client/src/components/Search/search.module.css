@@ -72,22 +72,22 @@
 
   @media (max-width : 500px){
     .field input{
-      width: 60%;
+      width: 6em;
     }
     .button{
       width: 20%;
 
     }
     .button0{
-      width: 30%;
+      width: 35%;
     }
     .button1{
-      width: 30%;
+      width: 35%;
     }
     .button2{
-      width: 30%;
+      width: 35%;
     }
     option{
-      font-size: 6px;
+      font-size: 4px;
     }
   }
