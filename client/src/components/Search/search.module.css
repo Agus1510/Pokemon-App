@@ -73,19 +73,16 @@
   @media (max-width : 500px){
 
     .field{
-      box-shadow: 0;
+      box-shadow: none;
     }
     .field input{
       width: 8em;
     }
-    .button{
-      width: 20%;
 
-    }
     .button0{
       width: 35%;
     }
-    .button1{
+    .button{
       width: 40%;
     }
     .button2{
