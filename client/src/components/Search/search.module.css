@@ -74,6 +74,7 @@
 
     .field{
       box-shadow: none;
+      margin-left: 40%;
     }
     .field input{
       width: 8em;
@@ -83,7 +84,7 @@
       width: 35%;
     }
     .button{
-      width: 40%;
+      width: 35%;
     }
     .button2{
       width: 35%;
