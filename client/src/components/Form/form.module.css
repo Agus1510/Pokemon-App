@@ -30,7 +30,7 @@
   }
 
   .form {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -222,8 +222,7 @@
 
   @media (max-width : 700px){
     .form {
-      padding: 30px 25px;
-      margin-top: 5em;
+      padding: 4em 2em;
     }
     
     .separado {
