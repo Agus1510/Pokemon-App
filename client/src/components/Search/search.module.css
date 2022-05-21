@@ -71,9 +71,12 @@
   }
 
   @media (max-width : 500px){
+
+    .field{
+      box-shadow: 0;
+    }
     .field input{
       width: 8em;
-      box-shadow: 0;
     }
     .button{
       width: 20%;
@@ -83,7 +86,7 @@
       width: 35%;
     }
     .button1{
-      width: 35%;
+      width: 40%;
     }
     .button2{
       width: 35%;
