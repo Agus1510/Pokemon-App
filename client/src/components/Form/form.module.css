@@ -227,7 +227,7 @@
   @media (max-width : 390px){
     .form {
       margin-top: 15em;
-      width: 50%;
+      width: 80vw;
     }
     
     .separado {
