@@ -74,10 +74,11 @@
 
     .field{
       box-shadow: none;
+      margin-right: 10%;
     }
     .field input{
       width: 8em;
-      margin-right: 30%;
+
     }
 
     .button0{
