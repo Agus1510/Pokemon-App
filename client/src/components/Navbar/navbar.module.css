@@ -173,8 +173,6 @@ body {
 
 @media (max-width : 390px){
   .header{
-    align-items: flex-start;
-    width: 100vw;
   }
   .header .logo img {
     width: 120px;
