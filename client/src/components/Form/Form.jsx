@@ -88,16 +88,16 @@ export const Form = () => {
 
     const submit = async (e) => {
         e.preventDefault();
-        // const create = await fetch("http://127.0.0.1:3001/pokemons", {
-        //     method: "POST",
-        //     headers: {
-        //       Accept: "application/json",
-        //       "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify(data),
-        // })
+        const create = await fetch("/pokemons", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
         dispatch(getPokemons());
-        // const response = await create.json();
+        const response = await create.json();
         setData({
             name: "",
             vida: "",
