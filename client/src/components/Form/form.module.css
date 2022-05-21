@@ -224,7 +224,7 @@
     width: 190px;
   }
 
-  @media (max-width : 390px){
+  @media (max-width : 500px){
     .form {
       margin-top: 15em;
       width: 80vw;
@@ -240,7 +240,7 @@
     }
 
     .logo{
-      height: 50%;
-      width: 50%;
+      height: 2em;
+      width: 3em;
     }
   }
