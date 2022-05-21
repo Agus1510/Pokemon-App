@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export function getTypes() {return async (dispatch) => {
-    const response = await axios.get("https://agus-pokemon.herokuapp.com/types");
+    const response = await axios.get("/types");
     const data = await response.data;
     dispatch({
       type: "GET_TYPE",
@@ -10,7 +10,7 @@ export function getTypes() {return async (dispatch) => {
   };
 } 
   export function getPokemons(){ return async (dispatch) => {
-    const response = await axios.get(`https://agus-pokemon.herokuapp.com/pokemons`);
+    const response = await axios.get(`/pokemons`);
     const data = await response.data;
       dispatch({
       type: "GET_POKEMONS",
@@ -21,7 +21,7 @@ export function getTypes() {return async (dispatch) => {
   
   export function getByName(name){ return async (dispatch) => {
     const response = await axios.get(
-      `https://agus-pokemon.herokuapp.com/pokemons?name=${name}`
+      `/pokemons?name=${name}`
     );
     const data = await response.data;
     dispatch({
@@ -32,7 +32,7 @@ export function getTypes() {return async (dispatch) => {
 }; 
   export function filters(num) {return async (dispatch) => {
     const response = await axios.get(
-      `https://agus-pokemon.herokuapp.com/pokemons?by=${num}`
+      `/pokemons?by=${num}`
     );
     const data = await response.data;
     dispatch({
@@ -58,7 +58,7 @@ export function getTypes() {return async (dispatch) => {
   export function deletePokemon(id) {
     return function (dispatch) {
       return axios
-        .delete(`https://agus-pokemon.herokuapp.com/pokemons/${id}`)
+        .delete(`/pokemons/${id}`)
         .then(() => {
           return dispatch({ type: "DELETE_POKEMON" });
         })
