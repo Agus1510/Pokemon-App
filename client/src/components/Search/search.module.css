@@ -72,9 +72,9 @@
 
   @media (max-width : 500px){
     .field{
-      width: 40%;
+      width: 50vw;
     }
     .field2{
-      width: 40%;
+      width: 50vw;
     }
   }
