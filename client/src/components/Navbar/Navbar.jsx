@@ -46,7 +46,6 @@ export const Navbar = () => {
         <Link to="/" className={ style.logo }>
           <img src="/img/logo.png" alt="" />
         </Link>
-        <script src="script.js" defer></script>
         <nav className={style.navbar_container}>
         <ul className ={style.list}>
             <div data-indicator className={style.indicator} style={{"--position": oldIndex}}>

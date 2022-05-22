@@ -61,6 +61,7 @@ export const Pokemon = () => {
             <p>Height: {pokemon.height / 10}m</p>
           </div>
         </div>
+        <div className={style.move}>
         <div className={style.type}>
           {pokemon.type
             ? pokemon?.type.map((t) => <h3 className={style[`${t}`]} key={t}>{t}</h3>)
@@ -75,6 +76,7 @@ export const Pokemon = () => {
             <Stats valor={pokemon.defensa} nombre={"Defense"} />
             <Stats valor={pokemon.velocidad} nombre={"Speed"} />
           </div>
+        </div>
         </div>
         <Alert trigger={btnAlert} setTrigger={setBtnAlert}>
           <img src="https://s8.gifyu.com/images/check-greenadc54c8c906856d6.gif" alt="gif"></img>

@@ -26,13 +26,11 @@ import { getPokemons, getTypes } from "./actions";
 import { Pokemon } from "./components/Pokemon/Pokemon";
 
 function App() {
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTypes());
     dispatch(getPokemons());
   });
-
   return (
     <>
       <Switch>
@@ -55,5 +53,4 @@ function App() {
     </>
   );
 }
-
 export default App;
