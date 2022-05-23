@@ -53,6 +53,7 @@
     column-gap: 5em;
     break-inside: avoid;
     -moz-columns: 2;
+    break-inside:avoid ;
     -webkit-columns: 2;
     -webkit-break-inside: avoid;
   }
