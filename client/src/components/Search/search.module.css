@@ -1,3 +1,4 @@
+@import-normalize;
 .container {
   margin: 100px;
   -webkit-box-align: center;

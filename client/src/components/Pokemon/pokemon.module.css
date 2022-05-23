@@ -1,3 +1,5 @@
+@import-normalize;
+
 .container {
   background-image: url("https://mcdn.wallpapersafari.com/medium/42/49/XIhAQL.jpg");
   background-repeat: no-repeat;
