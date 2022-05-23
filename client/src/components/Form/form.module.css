@@ -54,7 +54,6 @@
     padding: 30px 25px;
     background-color: #f2f2f2;
     border-radius: 40px;
-    margin-top: 80px;
     vertical-align: top;
   }
   
@@ -265,7 +264,7 @@
       font-size: 2rem;
     }
     .form {
-      margin-top: 17em;
+      margin-top: 20em;
       width: 80vw;
     }
     
