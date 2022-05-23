@@ -241,11 +241,15 @@
     padding: 0.6em 0.8em;
     width: 100px;
     margin-right: 20px;
-    background-color: rgb(218, 6, 6);
+    background-color: rgb(177, 3, 3);
     color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
     border-radius: 40px;
+  }
+
+  .submit:hover{
+    background-color: red;
   }
 
   .preview{
@@ -261,7 +265,12 @@
     }
 
     h1{
-      font-size: 2rem;
+      font-size: 1.3rem;
+      line-height: 1.1;
+      letter-spacing: 0.007em;
+      font-weight: 400;
+      margin-right: 3em;
+      
     }
     .form {
       margin-top: 20em;
@@ -294,5 +303,8 @@
 
     .tipos{
       flex-direction: column;
+    }
+    .submit{
+      width: 60px;
     }
   }
