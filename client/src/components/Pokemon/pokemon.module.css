@@ -1,253 +1,342 @@
 .container {
-    background-image: url("https://mcdn.wallpapersafari.com/medium/42/49/XIhAQL.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("https://mcdn.wallpapersafari.com/medium/42/49/XIhAQL.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 10em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.boton {
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ margin-left: 10em;
+ color: white;
+ background-color: red;
+}
+
+.container h1 {
+  font-weight: 800;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  color:  white;
+  margin-bottom: 0.3em;
+}
+
+.container h2 {
+  letter-spacing: 10px;
+  font-size: 2em;
+  margin-right: 20px;
+}
+
+.ima {
+  display: table;
+  margin: 1em auto;
+}
+
+.parrafo {
+  margin-top: 40px;
+  text-transform: lowercase;
+}
+
+.type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 20px 400px;
+}
+
+.type .grass {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(
+    310deg,
+    rgba(196, 218, 61, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(39, 80, 9, 1) 100%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(196, 218, 61, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(39, 80, 9, 1) 100%
+  );
+}
+
+.type .normal {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(340deg, #fdbb2d 0%, #3a1c71 100%);
+  background: linear-gradient(110deg, #fdbb2d 0%, #3a1c71 100%);
+}
+
+.type .ground {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(340deg, #fdbb2d 0%, #c08a53 100%);
+  background: linear-gradient(110deg, #fdbb2d 0%, #c08a53 100%);
+}
+
+.type .water {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(330deg, #1cb5e0 0%, #000851 100%);
+  background: linear-gradient(120deg, #1cb5e0 0%, #000851 100%);
+}
+
+.type .rock {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(340deg, #fdbb2d 0%, #c08a53 100%);
+  background: linear-gradient(110deg, #fdbb2d 0%, #c08a53 100%);
+}
+
+.type .electric {
+  width: 15%;
+  border-radius: 20px;
+  background: -webkit-gradient(
+    linear,
+    left top, right top,
+    color-stop(34%, rgba(255, 222, 0, 1)),
+    color-stop(83%, rgba(232, 255, 153, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 222, 0, 1) 34%,
+    rgba(232, 255, 153, 1) 83%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 222, 0, 1) 34%,
+    rgba(232, 255, 153, 1) 83%
+  );
+}
+
+.type .fire {
+  width: 15%;
+  border-radius: 20px;
+  background: -webkit-gradient(
+    linear,
+    left bottom, left top,
+    color-stop(10%, rgba(199, 24, 0, 1)),
+    to(rgba(252, 194, 69, 1))
+  );
+  background: -o-linear-gradient(
+    bottom,
+    rgba(199, 24, 0, 1) 10%,
+    rgba(252, 194, 69, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(199, 24, 0, 1) 10%,
+    rgba(252, 194, 69, 1) 100%
+  );
+}
+
+.type .psychic {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(
+    310deg,
+    rgba(255, 167, 249, 1) 0%,
+    rgba(255, 44, 195, 1) 39%,
+    rgba(255, 227, 167, 1) 100%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(255, 167, 249, 1) 0%,
+    rgba(255, 44, 195, 1) 39%,
+    rgba(255, 227, 167, 1) 100%
+  );
+}
+
+.type .dark {
+  color: white;
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(
+    70deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 100%
+  );
+  background: linear-gradient(
+    20deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 100%
+  );
+}
+
+.type .shadow {
+  color: white;
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(
+    70deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 100%
+  );
+  background: linear-gradient(
+    20deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 100%
+  );
+}
+
+.type .poison {
+  color: white;
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(
+    70deg,
+    rgba(92, 2, 73, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(25, 25, 25, 1) 0%
+  );
+  background: linear-gradient(
+    20deg,
+    rgba(92, 2, 73, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(25, 25, 25, 1) 0%
+  );
+}
+
+.type .bug {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(
+    310deg,
+    rgba(39, 80, 9, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(196, 218, 61, 1) 100%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(39, 80, 9, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(196, 218, 61, 1) 100%
+  );
+}
+
+.type .ice {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(
+    220deg,
+    rgba(202, 234, 246, 1) 0%,
+    rgba(160, 234, 241, 1) 46%,
+    rgba(111, 184, 235, 1) 100%
+  );
+  background: linear-gradient(
+    230deg,
+    rgba(202, 234, 246, 1) 0%,
+    rgba(160, 234, 241, 1) 46%,
+    rgba(111, 184, 235, 1) 100%
+  );
+}
+.type .ghost {
+  color: white;
+  width: 15%;
+  border-radius: 20px;
+  background: black;
+}
+
+.type .steel {
+  color: white;
+  width: 15%;
+  border-radius: 20px;
+  background: #7b7b85;
+}
+
+.type .fairy {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(
+    45deg,
+    rgba(255, 230, 240, 1) 0%,
+    rgba(255, 197, 224, 1) 34%,
+    rgba(255, 166, 185, 1) 71%,
+    rgba(255, 138, 149, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(255, 230, 240, 1) 0%,
+    rgba(255, 197, 224, 1) 34%,
+    rgba(255, 166, 185, 1) 71%,
+    rgba(255, 138, 149, 1) 100%
+  );
+}
+
+.type .flying {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(340deg, #4d6c81 0%, #698ba5 100%);
+  background: linear-gradient(110deg, #4d6c81 0%, #698ba5 100%);
+}
+
+.type .dragon {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(340deg, #44929e 0%, #5fd5e7 100%);
+  background: linear-gradient(110deg, #44929e 0%, #5fd5e7 100%);
+}
+
+.type .fighting {
+  width: 15%;
+  border-radius: 20px;
+  background: -o-linear-gradient(340deg, #a34027 0%, #fb6537 100%);
+  background: linear-gradient(110deg, #a34027 0%, #fb6537 100%);
+}
+
+meter {
+  width: 450px;
+  height: 50px;
+  margin: 10px 20px;
+}
+
+p {
+  font-weight: 800;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+p span {
+  font-weight: 600;
+}
+
+@media (max-width: 500px){
+  .container{
+    width: 100vw;
     height: 100vh;
-    padding-top: 10em;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-  
- .boton {
-   display: flex;
-   margin-left: 10em;
-   color: white;
-   background-color: red;
- }
-  
-  .container h1 {
-    font-weight: 800;
-    font-size: 3.5em;
-    text-transform: uppercase;
-    color:  white;
-    margin-bottom: 0.3em;
-  }
-  
-  .container h2 {
-    letter-spacing: 10px;
-    font-size: 2em;
-    margin-right: 20px;
-  }
-  
-  .ima {
-    display: table;
-    margin: 1em auto;
-  }
+    display: inline-block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
-  .parrafo {
-    margin-top: 40px;
-    text-transform: lowercase;
   }
-  
-  .type {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 400px;
-  }
-  
-  .type .grass {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      140deg,
-      rgba(196, 218, 61, 1) 0%,
-      rgba(110, 127, 14, 1) 69%,
-      rgba(39, 80, 9, 1) 100%
-    );
-  }
-  
-  .type .normal {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(110deg, #fdbb2d 0%, #3a1c71 100%);
-  }
-  
-  .type .ground {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(110deg, #fdbb2d 0%, #c08a53 100%);
-  }
-  
-  .type .water {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(120deg, #1cb5e0 0%, #000851 100%);
-  }
-  
-  .type .rock {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(110deg, #fdbb2d 0%, #c08a53 100%);
-  }
-  
-  .type .electric {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 222, 0, 1) 34%,
-      rgba(232, 255, 153, 1) 83%
-    );
-  }
-  
-  .type .fire {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      0deg,
-      rgba(199, 24, 0, 1) 10%,
-      rgba(252, 194, 69, 1) 100%
-    );
-  }
-  
-  .type .psychic {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      140deg,
-      rgba(255, 167, 249, 1) 0%,
-      rgba(255, 44, 195, 1) 39%,
-      rgba(255, 227, 167, 1) 100%
-    );
-  }
-  
-  .type .dark {
-    color: white;
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      20deg,
-      rgba(25, 25, 25, 1) 0%,
-      rgba(16, 11, 50, 1) 33%,
-      rgba(92, 2, 73, 1) 100%
-    );
-  }
-  
-  .type .shadow {
-    color: white;
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      20deg,
-      rgba(25, 25, 25, 1) 0%,
-      rgba(16, 11, 50, 1) 33%,
-      rgba(92, 2, 73, 1) 100%
-    );
-  }
-  
-  .type .poison {
-    color: white;
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      20deg,
-      rgba(92, 2, 73, 1) 0%,
-      rgba(16, 11, 50, 1) 33%,
-      rgba(25, 25, 25, 1) 0%
-    );
-  }
-  
-  .type .bug {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      140deg,
-      rgba(39, 80, 9, 1) 0%,
-      rgba(110, 127, 14, 1) 69%,
-      rgba(196, 218, 61, 1) 100%
-    );
-  }
-  
-  .type .ice {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      230deg,
-      rgba(202, 234, 246, 1) 0%,
-      rgba(160, 234, 241, 1) 46%,
-      rgba(111, 184, 235, 1) 100%
-    );
-  }
-  .type .ghost {
-    color: white;
-    width: 15%;
-    border-radius: 20px;
-    background: black;
-  }
-  
-  .type .steel {
-    color: white;
-    width: 15%;
-    border-radius: 20px;
-    background: #7b7b85;
-  }
-  
-  .type .fairy {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(
-      45deg,
-      rgba(255, 230, 240, 1) 0%,
-      rgba(255, 197, 224, 1) 34%,
-      rgba(255, 166, 185, 1) 71%,
-      rgba(255, 138, 149, 1) 100%
-    );
-  }
-  
-  .type .flying {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(110deg, #4d6c81 0%, #698ba5 100%);
-  }
-  
-  .type .dragon {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(110deg, #44929e 0%, #5fd5e7 100%);
-  }
-  
-  .type .fighting {
-    width: 15%;
-    border-radius: 20px;
-    background: linear-gradient(110deg, #a34027 0%, #fb6537 100%);
-  }
-  
   meter {
-    width: 450px;
-    height: 50px;
-    margin: 10px 20px;
+    width: 100px;
+    height: 25px;
   }
-  
-  p {
-    font-weight: 800;
-    font-size: 1.5em;
-    text-transform: uppercase;
-  }
-  
-  p span {
-    font-weight: 600;
+  .type{
+    font-size: 0.7rem;
+    margin-left: 18em;
   }
 
-  @media (max-width: 500px){
-    .container{
-      width: 100vw;
-      height: 100vh;
-      display: inline-block;
-      justify-content: center;
-
-    }
-    meter {
-      width: 100px;
-      height: 25px;
-    }
-    .type{
-      font-size: 0.7rem;
-      margin-left: 18em;
-    }
-
-    .type h3{
-      display: flex;
-      font-size: 2em 
-    }
+  .type h3{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 2em 
   }
+}

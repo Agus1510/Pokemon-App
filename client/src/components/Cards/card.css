@@ -1,471 +1,676 @@
 img {
-    height: 150px;
-    margin: auto;
-    display: inline-block;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin: 0;
-    font-weight: 400;
-  }
+  height: 150px;
+  margin: auto;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 400;
+}
 
 
-  .container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: -6em;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: 2;
-  }
-  
-  .botones {
-    display: flex;
-    justify-content: center;
-    margin-top: 5em ;
-  }
-  
-  .pagesN {
-    margin-top: -40px;
-    margin-bottom: 30px;
-    padding: 8px 16px;
-    background-color: rgb(231, 235, 12);
-    border-radius: 0em 2em 2em 0em ;
-  }
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: -6em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
 
-  .pagesP {
-    margin-top: -40px;
-    margin-bottom: 30px;
-    padding: 8px 16px;
-    background-color: rgb(231, 235, 12);
-    border-radius: 2em 0em 0em 2em ;
-  }
-  
-  figure {
-    display: inline-block;
-    width: 300px;
-    margin-top: 40px;
-    padding: 1em;
-    border-radius: 15px;
-    background: #ddd;
-    text-align: left;
-  }
-  
-  .cardCaption {
-    background-color: rgba(255, 255, 255, 0.65);
-    position: relative;
-    border-radius: 0 0 3px 3px;
+.botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5em ;
+}
 
-  }
-  
-  .cardImageContainer {
-    background-color: rgba(255, 255, 255, 0.7);
-    align-items: center;
-    text-align: center;
-    padding-top: 0.5em;
-    border-radius: 3px 3px 0 0;
-  }
+.pagesN {
+  margin-top: -40px;
+  margin-bottom: 30px;
+  padding: 8px 16px;
+  background-color: rgb(231, 235, 12);
+  border-radius: 0em 2em 2em 0em ;
+}
 
-  
-  .cardType {
-    position: relative;
-    top: -0.1em;
-    transform: translateY(-50%);
-    color: #f2f2f2;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 0.25em;
-    line-height: 1;
-    border-radius: 0.3em;
-    background: #bbbbbb;
+.pagesP {
+  margin-top: -40px;
+  margin-bottom: 30px;
+  padding: 8px 16px;
+  background-color: rgb(231, 235, 12);
+  border-radius: 2em 0em 0em 2em ;
+}
 
-  }
-  
-  .cardName {
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: rgb(46, 46, 46);
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-  
-  .types {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .normal {
-    background: linear-gradient(110deg, #fdbb2d 0%, #3a1c71 100%);
-    box-shadow: 0px 5px 20px -10px #3a1c71;
-  }
+figure {
+  display: inline-block;
+  width: 300px;
+  margin-top: 40px;
+  padding: 1em;
+  border-radius: 15px;
+  background: #ddd;
+  text-align: left;
+}
 
-  .normal:hover {
-    background: linear-gradient(80deg, #3a1c71 0%, #fdbb2d 100%);
-    box-shadow: 0px 5px 20px -10px #3a1c71;
-  }
-  
-  
-  .normal .cardType {
-    background-color: #c08a53;
-  }
-  
-  .ground {
-    background: linear-gradient(110deg, #b1742c 0%, #724c1f 100%);
-    box-shadow: 0px 5px 20px -10px #3a1c71;
-  }
+.cardCaption {
+  background-color: rgba(255, 255, 255, 0.65);
+  position: relative;
+  border-radius: 0 0 3px 3px;
 
-  .ground:hover {
-    background: linear-gradient(70deg, #724c1f 0%, #b1742c 100%);
-    box-shadow: 0px 5px 20px -10px #3a1c71;
-  }
-  
-  .ground .cardType {
-    background-color: #724c1f;
-  }
-  
-  .rock {
-    background: linear-gradient(110deg, #491809 0%, #913f20 100%);
-    box-shadow: 0px 5px 20px -10px #3a1c71;
-  }
+}
 
-  .rock:hover {
-    background: linear-gradient(50deg, #913f20 0%, #491809 100%);
-    box-shadow: 0px 5px 20px -10px #3a1c71;
-  }
-  
-  .rock .cardType {
-    background-color: #913f20;
-  }
-  
-  .water {
-    background: linear-gradient(120deg, #1cb5e0 0%, #000851 100%);
-    box-shadow: 0px 5px 20px -10px #000851;
-  }
+.cardImageContainer {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-top: 0.5em;
+  border-radius: 3px 3px 0 0;
+}
 
-  .water:hover {
-    background: linear-gradient(
-      40deg, 
-      #000851 0%, 
-      #1cb5e0 100%
-    );
-    box-shadow: 0px 5px 20px -10px #000851;
-  }
-  
-  .water .cardType {
-    background-color: #1cb5e0;
-  }
-  
-  .electric {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 222, 0, 1) 34%,
-      rgba(232, 255, 153, 1) 83%
-    );
-  }
 
-  .electric:hover {
-    background: linear-gradient(
-      90deg,
-      rgba(232, 255, 153, 1) 34%,
-      rgba(255, 222, 0, 1) 83%
-    );
-  }
-  
-  .electric .cardType {
-    background-color: #000;
-  }
-  
-  .fire {
-    background: linear-gradient(
-      0deg,
-      rgba(199, 24, 0, 1) 10%,
-      rgba(252, 194, 69, 1) 100%
-    );
-  }
+.cardType {
+  position: relative;
+  top: -0.1em;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25em;
+  line-height: 1;
+  border-radius: 0.3em;
+  background: #bbbbbb;
 
-  .fire:hover {
-    background: linear-gradient(
-      40deg,
-      rgba(252, 194, 69, 1) 10%,
-      rgba(199, 24, 0, 1) 100%
-    );
-  }
-  
-  .fire .cardType {
-    background-color: rgba(199, 24, 0, 1);
-  }
-  
-  .psychic {
-    background: linear-gradient(
-      140deg,
-      rgba(255, 167, 249, 1) 0%,
-      rgba(255, 44, 195, 1) 39%,
-      rgba(255, 227, 167, 1) 100%
-    );
-  }
-  
-  .psychic:hover {
-    background: linear-gradient(
-      100deg,
-      rgba(255, 227, 167, 1) 0%,
-      rgba(255, 44, 195, 1) 39%,
-      rgba(255, 167, 249, 1) 100%
-    );
-  }
+}
 
-  .psychic .cardType {
-    background: #ff2cc3;
-  }
-  
-  .dark {
-    background: linear-gradient(
-      20deg,
-      rgba(25, 25, 25, 1) 0%,
-      rgba(16, 11, 50, 1) 33%,
-      rgba(92, 2, 73, 1) 100%
-    );
-  }
+.cardName {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgb(46, 46, 46);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 
-  .dark:hover {
-    background: linear-gradient(
-      60deg,
-      rgba(92, 2, 73, 1) 0%,
-      rgba(16, 11, 50, 1) 33%,
-      rgba(25, 25, 25, 1) 100%
-    );
-  }
+.types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
 
-  
-  .dark .cardType {
-    background: #5c0249;
-  }
-  
-  .shadow {
-    background: linear-gradient(
-      20deg,
-      rgba(25, 25, 25, 1) 0%,
-      rgba(16, 11, 50, 1) 33%,
-      rgba(92, 2, 73, 1) 100%
-    );
-  }
+.normal {
+  background: -o-linear-gradient(340deg, #fdbb2d 0%, #3a1c71 100%);
+  background: linear-gradient(110deg, #fdbb2d 0%, #3a1c71 100%);
+  -webkit-box-shadow: 0px 5px 20px -10px #3a1c71;
+          box-shadow: 0px 5px 20px -10px #3a1c71;
+}
 
-  .shadow:hover {
-    background: linear-gradient(
-      60deg,
-      rgba(92, 2, 73, 1) 0%,
-      rgba(16, 11, 50, 1) 33%,
-      rgba(25, 25, 25, 1) 100%
-    );
-  }
-  
-  .shadow .cardType {
-    background: #5c0249;
-  }
-  
-  .poison {
-    background: linear-gradient(
-      20deg,
-      rgba(92, 2, 73, 1) 0%,
-      rgba(16, 11, 50, 1) 33%,
-      rgba(25, 25, 25, 1) 0%
-    );
-  }
+.normal:hover {
+  background: -o-linear-gradient(10deg, #3a1c71 0%, #fdbb2d 100%);
+  background: linear-gradient(80deg, #3a1c71 0%, #fdbb2d 100%);
+  -webkit-box-shadow: 0px 5px 20px -10px #3a1c71;
+          box-shadow: 0px 5px 20px -10px #3a1c71;
+}
 
-  .poison:hover {
-    background: linear-gradient(
-      80deg,
-      rgba(25, 25, 25, 1) 0%,
-      rgba(16, 11, 50, 1) 33%,
-      rgba(92, 2, 73, 1) 0%
-    );
-  }
-  
-  .poison .cardType {
-    background: #5c0249;
-  }
-  
-  .grass {
-    background: linear-gradient(
-      140deg,
-      rgba(196, 218, 61, 1) 0%,
-      rgba(110, 127, 14, 1) 69%,
-      rgba(39, 80, 9, 1) 100%
-    );
-  }
 
-  .grass:hover {
-    background: linear-gradient(
-      140deg,
-      rgba(39, 80, 9, 1) 0%,
-      rgba(110, 127, 14, 1) 69%,
-      rgb(196, 218, 61, 1) 100%
-    );
-  }
-  
-  .grass .cardType {
-    background: #6e7f0e;
-  }
-  .bug {
-    background: linear-gradient(
-      140deg,
-      rgba(39, 80, 9, 1) 0%,
-      rgba(110, 127, 14, 1) 69%,
-      rgba(196, 218, 61, 1) 100%
-    );
-  }
-  
-  .bug:hover {
-    background: linear-gradient(
-      140deg,
-      rgba(196, 218, 61, 1) 0%,
-      rgba(110, 127, 14, 1) 69%,
-      rgba(39, 80, 9, 1) 100%
-    );
-  }
+.normal .cardType {
+  background-color: #c08a53;
+}
 
-  .ice {
-    background: linear-gradient(
-      230deg,
-      rgba(202, 234, 246, 1) 0%,
-      rgba(160, 234, 241, 1) 46%,
-      rgba(111, 184, 235, 1) 100%
-    );
-  }
+.ground {
+  background: -o-linear-gradient(340deg, #b1742c 0%, #724c1f 100%);
+  background: linear-gradient(110deg, #b1742c 0%, #724c1f 100%);
+  -webkit-box-shadow: 0px 5px 20px -10px #3a1c71;
+          box-shadow: 0px 5px 20px -10px #3a1c71;
+}
 
-  .ice:hover {
-    background: linear-gradient(
-      230deg,
-      rgba(111, 184, 235, 1) 0%,
-      rgba(160, 234, 241, 1) 46%,
-      rgba(202, 234, 246, 1) 100%
-    );
-  }
-  
-  .bug .cardType {
-    background: #6e7f0e;
-  }
-  
-  .ice .cardType {
-    background: #6fb8eb;
-  }
-  
-  .fairy {
-    background: linear-gradient(
-      45deg,
-      rgba(255, 230, 240, 1) 0%,
-      rgba(255, 197, 224, 1) 34%,
-      rgba(255, 166, 185, 1) 71%,
-      rgba(255, 138, 149, 1) 100%
-    );
-  }
+.ground:hover {
+  background: -o-linear-gradient(20deg, #724c1f 0%, #b1742c 100%);
+  background: linear-gradient(70deg, #724c1f 0%, #b1742c 100%);
+  -webkit-box-shadow: 0px 5px 20px -10px #3a1c71;
+          box-shadow: 0px 5px 20px -10px #3a1c71;
+}
 
-  .fairy:hover {
-    background: linear-gradient(
-      45deg,
-      rgba(255, 138, 149, 1) 0%,
-      rgba(255, 166, 185, 1) 34%,
-      rgba(255, 197, 224, 1) 71%,
-      rgba(255, 230, 240, 1) 100%
-    );
-  }
-  
-  
-  .fairy .cardType {
-    background: #ff8a95;
-  }
-  
-  .ghost {
-    background: black;
-  }
-  
-  .ghost .cardType {
-    background: black;
-  }
-  
-  .flying {
-    background: linear-gradient(110deg, #4d6c81 0%, #698ba5 100%);
-  }
+.ground .cardType {
+  background-color: #724c1f;
+}
 
-  .flying:hover {
-    background: linear-gradient(50deg, #698ba5 0%, #4d6c81 100%);
-  }
-  
-  .flying .cardType {
-    background: #4d6c81;
-  }
-  
-  .dragon {
-    background: linear-gradient(110deg, #44929e 0%, #5fd5e7 100%);
-  }
+.rock {
+  background: -o-linear-gradient(340deg, #491809 0%, #913f20 100%);
+  background: linear-gradient(110deg, #491809 0%, #913f20 100%);
+  -webkit-box-shadow: 0px 5px 20px -10px #3a1c71;
+          box-shadow: 0px 5px 20px -10px #3a1c71;
+}
 
-  .dragon:hover {
-    background: linear-gradient(110deg, #5fd5e7 0%, #44929e 100%);
-  }
-  
-  .dragon .cardType {
-    color: black;
-    background: #5fd5e7;
-  }
-  
-  .steel {
-    background: linear-gradient(110deg, #5d7b6f 0%, #3bcb9b 100%);
-  }
+.rock:hover {
+  background: -o-linear-gradient(40deg, #913f20 0%, #491809 100%);
+  background: linear-gradient(50deg, #913f20 0%, #491809 100%);
+  -webkit-box-shadow: 0px 5px 20px -10px #3a1c71;
+          box-shadow: 0px 5px 20px -10px #3a1c71;
+}
 
-  .steel:hover {
-    background: linear-gradient(80deg, #3bcb9b 0%, #5d7b6f 100%);
-  }
-  
-  .steel .cardType {
-    background: #3bcb9b;
-  }
-  
-  .fighting {
-    background: linear-gradient(110deg, #A34027 0%, #FB6537 100%);
-  }
+.rock .cardType {
+  background-color: #913f20;
+}
 
-  .fighting:hover {
-    background: linear-gradient(80deg, #FB6537 0%, #A34027 100%);
-  }
-  
-  .fighting .cardType {
-    background: #FB6537;
-  }
-  
-  figure:nth-child(1) {
-    transform: translateY(0px);
-  }
-  figure:nth-child(2) {
-    transform: translateY(0px);
-  }
-  figure:nth-child(3) {
-    transform: translateY(0px);
-  }
-  figure:nth-child(4) {
-    transform: translateY(0px);
-  }
-  figure:nth-child(5) {
-    transform: translateY(0px);
-  }
-  figure:nth-child(6) {
-    transform: translateY(0px);
-  }
-  figure:nth-child(7) {
-    transform: translateY(0px);
-  }
-  figure:nth-child(8) {
-    transform: translateY(0px);
-  }
-  figure:nth-child(9) {
-    transform: translateY(0px);
-  }
-  figure:hover {
-    z-index: 5;
-    box-shadow: 0px 13px 30px -15px #000;
-    transform: translateY(-10px);
-  }
+.water {
+  background: -o-linear-gradient(330deg, #1cb5e0 0%, #000851 100%);
+  background: linear-gradient(120deg, #1cb5e0 0%, #000851 100%);
+  -webkit-box-shadow: 0px 5px 20px -10px #000851;
+          box-shadow: 0px 5px 20px -10px #000851;
+}
+
+.water:hover {
+  background: -o-linear-gradient(
+    50deg, 
+    #000851 0%, 
+    #1cb5e0 100%
+  );
+  background: linear-gradient(
+    40deg, 
+    #000851 0%, 
+    #1cb5e0 100%
+  );
+  -webkit-box-shadow: 0px 5px 20px -10px #000851;
+          box-shadow: 0px 5px 20px -10px #000851;
+}
+
+.water .cardType {
+  background-color: #1cb5e0;
+}
+
+.electric {
+  background: -webkit-gradient(
+    linear,
+    left top, right top,
+    color-stop(34%, rgba(255, 222, 0, 1)),
+    color-stop(83%, rgba(232, 255, 153, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 222, 0, 1) 34%,
+    rgba(232, 255, 153, 1) 83%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 222, 0, 1) 34%,
+    rgba(232, 255, 153, 1) 83%
+  );
+}
+
+.electric:hover {
+  background: -webkit-gradient(
+    linear,
+    left top, right top,
+    color-stop(34%, rgba(232, 255, 153, 1)),
+    color-stop(83%, rgba(255, 222, 0, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(232, 255, 153, 1) 34%,
+    rgba(255, 222, 0, 1) 83%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(232, 255, 153, 1) 34%,
+    rgba(255, 222, 0, 1) 83%
+  );
+}
+
+.electric .cardType {
+  background-color: #000;
+}
+
+.fire {
+  background: -webkit-gradient(
+    linear,
+    left bottom, left top,
+    color-stop(10%, rgba(199, 24, 0, 1)),
+    to(rgba(252, 194, 69, 1))
+  );
+  background: -o-linear-gradient(
+    bottom,
+    rgba(199, 24, 0, 1) 10%,
+    rgba(252, 194, 69, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(199, 24, 0, 1) 10%,
+    rgba(252, 194, 69, 1) 100%
+  );
+}
+
+.fire:hover {
+  background: -o-linear-gradient(
+    50deg,
+    rgba(252, 194, 69, 1) 10%,
+    rgba(199, 24, 0, 1) 100%
+  );
+  background: linear-gradient(
+    40deg,
+    rgba(252, 194, 69, 1) 10%,
+    rgba(199, 24, 0, 1) 100%
+  );
+}
+
+.fire .cardType {
+  background-color: rgba(199, 24, 0, 1);
+}
+
+.psychic {
+  background: -o-linear-gradient(
+    310deg,
+    rgba(255, 167, 249, 1) 0%,
+    rgba(255, 44, 195, 1) 39%,
+    rgba(255, 227, 167, 1) 100%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(255, 167, 249, 1) 0%,
+    rgba(255, 44, 195, 1) 39%,
+    rgba(255, 227, 167, 1) 100%
+  );
+}
+
+.psychic:hover {
+  background: -o-linear-gradient(
+    350deg,
+    rgba(255, 227, 167, 1) 0%,
+    rgba(255, 44, 195, 1) 39%,
+    rgba(255, 167, 249, 1) 100%
+  );
+  background: linear-gradient(
+    100deg,
+    rgba(255, 227, 167, 1) 0%,
+    rgba(255, 44, 195, 1) 39%,
+    rgba(255, 167, 249, 1) 100%
+  );
+}
+
+.psychic .cardType {
+  background: #ff2cc3;
+}
+
+.dark {
+  background: -o-linear-gradient(
+    70deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 100%
+  );
+  background: linear-gradient(
+    20deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 100%
+  );
+}
+
+.dark:hover {
+  background: -o-linear-gradient(
+    30deg,
+    rgba(92, 2, 73, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(25, 25, 25, 1) 100%
+  );
+  background: linear-gradient(
+    60deg,
+    rgba(92, 2, 73, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(25, 25, 25, 1) 100%
+  );
+}
+
+
+.dark .cardType {
+  background: #5c0249;
+}
+
+.shadow {
+  background: -o-linear-gradient(
+    70deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 100%
+  );
+  background: linear-gradient(
+    20deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 100%
+  );
+}
+
+.shadow:hover {
+  background: -o-linear-gradient(
+    30deg,
+    rgba(92, 2, 73, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(25, 25, 25, 1) 100%
+  );
+  background: linear-gradient(
+    60deg,
+    rgba(92, 2, 73, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(25, 25, 25, 1) 100%
+  );
+}
+
+.shadow .cardType {
+  background: #5c0249;
+}
+
+.poison {
+  background: -o-linear-gradient(
+    70deg,
+    rgba(92, 2, 73, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(25, 25, 25, 1) 0%
+  );
+  background: linear-gradient(
+    20deg,
+    rgba(92, 2, 73, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(25, 25, 25, 1) 0%
+  );
+}
+
+.poison:hover {
+  background: -o-linear-gradient(
+    10deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 0%
+  );
+  background: linear-gradient(
+    80deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(16, 11, 50, 1) 33%,
+    rgba(92, 2, 73, 1) 0%
+  );
+}
+
+.poison .cardType {
+  background: #5c0249;
+}
+
+.grass {
+  background: -o-linear-gradient(
+    310deg,
+    rgba(196, 218, 61, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(39, 80, 9, 1) 100%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(196, 218, 61, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(39, 80, 9, 1) 100%
+  );
+}
+
+.grass:hover {
+  background: -o-linear-gradient(
+    310deg,
+    rgba(39, 80, 9, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgb(196, 218, 61, 1) 100%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(39, 80, 9, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgb(196, 218, 61, 1) 100%
+  );
+}
+
+.grass .cardType {
+  background: #6e7f0e;
+}
+.bug {
+  background: -o-linear-gradient(
+    310deg,
+    rgba(39, 80, 9, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(196, 218, 61, 1) 100%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(39, 80, 9, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(196, 218, 61, 1) 100%
+  );
+}
+
+.bug:hover {
+  background: -o-linear-gradient(
+    310deg,
+    rgba(196, 218, 61, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(39, 80, 9, 1) 100%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(196, 218, 61, 1) 0%,
+    rgba(110, 127, 14, 1) 69%,
+    rgba(39, 80, 9, 1) 100%
+  );
+}
+
+.ice {
+  background: -o-linear-gradient(
+    220deg,
+    rgba(202, 234, 246, 1) 0%,
+    rgba(160, 234, 241, 1) 46%,
+    rgba(111, 184, 235, 1) 100%
+  );
+  background: linear-gradient(
+    230deg,
+    rgba(202, 234, 246, 1) 0%,
+    rgba(160, 234, 241, 1) 46%,
+    rgba(111, 184, 235, 1) 100%
+  );
+}
+
+.ice:hover {
+  background: -o-linear-gradient(
+    220deg,
+    rgba(111, 184, 235, 1) 0%,
+    rgba(160, 234, 241, 1) 46%,
+    rgba(202, 234, 246, 1) 100%
+  );
+  background: linear-gradient(
+    230deg,
+    rgba(111, 184, 235, 1) 0%,
+    rgba(160, 234, 241, 1) 46%,
+    rgba(202, 234, 246, 1) 100%
+  );
+}
+
+.bug .cardType {
+  background: #6e7f0e;
+}
+
+.ice .cardType {
+  background: #6fb8eb;
+}
+
+.fairy {
+  background: -o-linear-gradient(
+    45deg,
+    rgba(255, 230, 240, 1) 0%,
+    rgba(255, 197, 224, 1) 34%,
+    rgba(255, 166, 185, 1) 71%,
+    rgba(255, 138, 149, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(255, 230, 240, 1) 0%,
+    rgba(255, 197, 224, 1) 34%,
+    rgba(255, 166, 185, 1) 71%,
+    rgba(255, 138, 149, 1) 100%
+  );
+}
+
+.fairy:hover {
+  background: -o-linear-gradient(
+    45deg,
+    rgba(255, 138, 149, 1) 0%,
+    rgba(255, 166, 185, 1) 34%,
+    rgba(255, 197, 224, 1) 71%,
+    rgba(255, 230, 240, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(255, 138, 149, 1) 0%,
+    rgba(255, 166, 185, 1) 34%,
+    rgba(255, 197, 224, 1) 71%,
+    rgba(255, 230, 240, 1) 100%
+  );
+}
+
+
+.fairy .cardType {
+  background: #ff8a95;
+}
+
+.ghost {
+  background: black;
+}
+
+.ghost .cardType {
+  background: black;
+}
+
+.flying {
+  background: -o-linear-gradient(340deg, #4d6c81 0%, #698ba5 100%);
+  background: linear-gradient(110deg, #4d6c81 0%, #698ba5 100%);
+}
+
+.flying:hover {
+  background: -o-linear-gradient(40deg, #698ba5 0%, #4d6c81 100%);
+  background: linear-gradient(50deg, #698ba5 0%, #4d6c81 100%);
+}
+
+.flying .cardType {
+  background: #4d6c81;
+}
+
+.dragon {
+  background: -o-linear-gradient(340deg, #44929e 0%, #5fd5e7 100%);
+  background: linear-gradient(110deg, #44929e 0%, #5fd5e7 100%);
+}
+
+.dragon:hover {
+  background: -o-linear-gradient(340deg, #5fd5e7 0%, #44929e 100%);
+  background: linear-gradient(110deg, #5fd5e7 0%, #44929e 100%);
+}
+
+.dragon .cardType {
+  color: black;
+  background: #5fd5e7;
+}
+
+.steel {
+  background: -o-linear-gradient(340deg, #5d7b6f 0%, #3bcb9b 100%);
+  background: linear-gradient(110deg, #5d7b6f 0%, #3bcb9b 100%);
+}
+
+.steel:hover {
+  background: -o-linear-gradient(10deg, #3bcb9b 0%, #5d7b6f 100%);
+  background: linear-gradient(80deg, #3bcb9b 0%, #5d7b6f 100%);
+}
+
+.steel .cardType {
+  background: #3bcb9b;
+}
+
+.fighting {
+  background: -o-linear-gradient(340deg, #A34027 0%, #FB6537 100%);
+  background: linear-gradient(110deg, #A34027 0%, #FB6537 100%);
+}
+
+.fighting:hover {
+  background: -o-linear-gradient(10deg, #FB6537 0%, #A34027 100%);
+  background: linear-gradient(80deg, #FB6537 0%, #A34027 100%);
+}
+
+.fighting .cardType {
+  background: #FB6537;
+}
+
+figure:nth-child(1) {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+figure:nth-child(2) {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+figure:nth-child(3) {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+figure:nth-child(4) {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+figure:nth-child(5) {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+figure:nth-child(6) {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+figure:nth-child(7) {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+figure:nth-child(8) {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+figure:nth-child(9) {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+figure:hover {
+  z-index: 5;
+  -webkit-box-shadow: 0px 13px 30px -15px #000;
+          box-shadow: 0px 13px 30px -15px #000;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+}

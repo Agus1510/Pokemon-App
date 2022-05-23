@@ -2,9 +2,15 @@
 
 
 .containerCreate {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     height: 100vh;
     background-image: url("https://wallpaperaccess.com/full/3952024.png");
@@ -15,6 +21,8 @@
     padding: 4px 6px;
     line-height: 190%;
     outline-style: none;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
     transition: all 0.6s;
     font-family: 'Raleway', sans-serif;
   }
@@ -35,9 +43,14 @@
 
   .form {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 30px 25px;
     background-color: #f2f2f2;
     border-radius: 40px;
@@ -50,8 +63,12 @@
     padding-right: 100px;
     color: rgb(34, 31, 31);
     columns: 2;
-    column-gap: 5em;
-    break-inside: avoid;
+    -webkit-column-gap: 5em;
+       -moz-column-gap: 5em;
+            column-gap: 5em;
+    -webkit-column-break-inside: avoid;
+       -moz-column-break-inside: avoid;
+            break-inside: avoid;
     -moz-columns: 2;
     break-inside:avoid ;
     -webkit-columns: 2;
@@ -59,8 +76,11 @@
   }
 
   .tipos {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     color: rgb(34, 31, 31) ;
     padding-top: 5em;
   }
@@ -146,7 +166,9 @@
   }
   
   form .danger input {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     text-align: center;
     background-color: none;
     border: 1px solid rgba(240, 1, 1, 0.89);
@@ -154,7 +176,8 @@
     font-size: 17px;
     width: 100%;
     display: block;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 60px;
     color: black;
     font-weight: 500;
@@ -163,7 +186,9 @@
   }
   
   form .question input {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     text-align: center;
     background-color: none;
     border: 1px solid rgba(71, 62, 62, 0.815);
@@ -171,7 +196,8 @@
     font-size: 17px;
     width: 100%;
     display: block;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 0.5em;
     color: black;
     font-weight: 500;
@@ -186,7 +212,9 @@
   }
 
   form .question2 input {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     text-align: center;
     background-color: none;
     border: 1px solid rgba(71, 62, 62, 0.815);
@@ -194,7 +222,8 @@
     font-size: 17px;
     width: 100%;
     display: block;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 0.5em;
     color: black;
     font-weight: 500;
@@ -242,11 +271,15 @@
     
     .separado {
       columns: 1;
-      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+         -moz-column-break-inside: avoid;
+              break-inside: avoid;
       -moz-columns: 1;
       -webkit-columns: 1;
       -webkit-break-inside: avoid;
-      column-gap: 1em;
+      -webkit-column-gap: 1em;
+         -moz-column-gap: 1em;
+              column-gap: 1em;
     }
 
     .logo img{
@@ -255,6 +288,8 @@
     }
 
     .hiddenCB div{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
   }
