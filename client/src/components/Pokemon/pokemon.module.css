@@ -339,4 +339,9 @@ p span {
     display: flex;
     font-size: 2em 
   }
+
+  .container h1{
+    font-size:  2em;
+    margin-left: 3.5em;
+  }
 }
