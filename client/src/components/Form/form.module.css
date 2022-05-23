@@ -291,4 +291,8 @@
       display: -ms-flexbox;
       display: flex;
     }
+
+    .tipos{
+      flex-direction: column;
+    }
   }
