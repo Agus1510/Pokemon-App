@@ -50,7 +50,7 @@ export const Pokemon = () => {
 
   return (
     <>
-    <div>   
+    <div>
       <div className={style.container}>
         <button onClick={() => handleDelete(id)} style={showButton() ? {display:'flex', marginLeft:'90em', color:'white', backgroundColor:'red', borderRadius:'20%'} : {display:'none'}}>X</button>
         <h1>{pokemon.name} #{pokemon.id}</h1>

@@ -5,7 +5,7 @@ function Alert(props){
     return (props.trigger) ? (
     <div className={style.alert}>
         <div className={style.alertInner}>
-        <button className={style.closeBtn} onClick={() => window.location = "http://localhost:3000/home"}>Close</button>
+        <button className={style.closeBtn} onClick={() => window.location = "http://pokemon.panizza.dev/home"}>Close</button>
         {props.children}
         </div>
     </div>
