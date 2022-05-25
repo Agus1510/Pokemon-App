@@ -29,10 +29,19 @@ export const Form = () => {
       } else if (!/^[a-zA-Z]+$/.test(input.name)) {
         errors.name = "Letters only";
       }
+      if(input.vida <=0) errors.vida = "Give it some health!";
+      if(input.vida > 500)errors.vida = "Cant be greater than 500";
+      if(input.fuerza <=0) errors.fuerza = "Give it some Damage!";
+      if(input.fuerza > 500)errors.fuerza = "Cant be greater than 500";
+      if(input.defensa <=0) errors.defensa = "Give it some Defense!";
+      if(input.defensa > 500)errors.defensa = "Cant be greater than 500";
+      if(input.velocidad <=0) errors.velocidad = "Give it some Speed!";
+      if(input.velocidad > 500)errors.velocidad = "Cant be greater than 500";
+      if(input.altura /10 <=0) errors.altura = "Give it some height!";
+      if(input.altura > 500)errors.altura = "Cant be greater than 500";
+      if(input.peso <=0) errors.peso = "Give it some weight!";
+      if(input.peso / 10  > 500)errors.peso = "Cant be greater than 500";
 
-      if(Number(input.vida) > 500){
-        errors.vida = "No puede ser > 500"
-      }
       return errors;
     } 
 
@@ -51,24 +60,24 @@ export const Form = () => {
     const [errors, setErrors] = useState({});
 
     const inputChange = (e) => {
-      if (e.target.name !== "name") {
+      // if (e.target.name !== "name") {
         if(e.target.name === "peso" || e.target.name ==="altura"){
           setData({
             ...data,
             [e.target.name]: Number(e.target.value) <=0 ? 0 :(e.target.value * 10), //La api usa la altura en decimetros y el peso en hectogramos, por eso multiplico por 10.
-          });
-        } else{
-        setData({
-          ...data,
-          [e.target.name]: Number(e.target.value) <= 0 ? 0 : e.target.value,
-        });
-      }} else {
+          }); }
+      //   } else{
+      //   setData({
+      //     ...data,
+      //     [e.target.name]: Number(e.target.value) <= 0 ? 0 : e.target.value,
+      //   });
+      // }} 
+      else {
         if(validate(e.target.value))
         setErrors(
           validate({
             ...data,
             [e.target.name]: e.target.value,
-            [e.target.vida]: e.target.value,
           })
         );
         setData({
@@ -145,9 +154,9 @@ export const Form = () => {
                   value={data.vida}
                   onChange={inputChange}
                 />
-               {errors.vida ? <p className={style.dangerText}>{errors.vida}</p> : null} 
               </p>
-              <p className={style.question}>
+              {errors.vida ? <p className={style.dangerText}>{errors.vida}</p> : null} 
+              <p className={errors.fuerza ? style.danger : style.question}>
                 <label>Strength</label>
                 <input
                   type="number"
@@ -157,7 +166,8 @@ export const Form = () => {
                   onChange={inputChange}
                 />
               </p>
-              <p className={style.question}>
+              {errors.fuerza ? <p className={style.dangerText}>{errors.fuerza}</p> : null} 
+              <p className={errors.defensa ? style.danger : style.question}>
                 <label>Defense</label>
                 <input
                   type="number"
@@ -167,7 +177,8 @@ export const Form = () => {
                   onChange={inputChange}
                 />
               </p>
-              <p className={style.question2}>
+              {errors.defensa ? <p className={style.dangerText}>{errors.defensa}</p> : null} 
+              <p className={errors.velocidad ? style.danger : style.question}>
                 <label>Speed</label>
                 <input
                   type="number"
@@ -175,18 +186,20 @@ export const Form = () => {
                   placeholder="0"
                   value={data.velocidad}
                   onChange={inputChange}
-                />
+                /> 
               </p>
-              <p className={style.question}>
+              {errors.velocidad ? <p className={style.dangerText}>{errors.velocidad}</p> : null}
+              <p className={errors.altura ? style.danger : style.question}>
                 <label>Height</label>
                 <input
                   type="number"
                   name="altura"
                   value={data.altura/10} //Se divide por 10, porque antes de multiplica por 10 para guardar en la DB.
                   onChange={inputChange}
-                />
+                /> 
               </p>
-              <p className={style.question}>
+              {errors.altura ? <p className={style.dangerText}>{errors.altura}</p> : null}
+              <p className={errors.peso ? style.danger : style.question}>
                 <label>Weight</label>
                 <input
                   type="number"
@@ -195,6 +208,7 @@ export const Form = () => {
                   onChange={inputChange}
                 />
               </p>
+              {errors.peso ? <p className={style.dangerText}>{errors.peso}</p> : null} 
               <p className={style.question}>
                 <label>Image</label>
                 <input
