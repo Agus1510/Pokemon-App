@@ -178,7 +178,7 @@ export const Form = () => {
                 />
               </p>
               {errors.defensa ? <p className={style.dangerText}>{errors.defensa}</p> : null} 
-              <p className={errors.velocidad ? style.danger : style.question}>
+              <p className={errors.velocidad ? style.danger : style.question2}>
                 <label>Speed</label>
                 <input
                   type="number"
