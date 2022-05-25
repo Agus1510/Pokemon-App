@@ -15,7 +15,7 @@ export const Card = ({ array, img }) => {
             <Link to={`/pokedex/${p.id}`} key={p.name}>
               <figure className={p.type[0]}>
                 <div className="cardImageContainer">
-                  <img src={p.img} alt="" className="CardImage" />
+                  <img src={p.img} alt="" className="CardImage" onError={(e)=>{e.target.onerror = null; e.target.src="https://media2.giphy.com/media/26xBIygOcC3bAWg3S/giphy.gif?cid=790b761127e51193747ba2e3e20201df51ede3f208e2c397&rid=giphy.gif&ct=g"}}  />
                 </div>
                 <figcaption className="cardCaption">
                   <h1 className="cardName">#{p.idPoke ? `${p.idPoke}B` : p.id}-{p.name}</h1>
