@@ -58,7 +58,7 @@ const byName = async (name) => {
           idPoke: db.idPoke,
           name: db.name,
           type: db.tipos.map((t) => t.name),
-          img: "https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif",
+          img: db.img,
         },
       ];
       return pokemonDb;
