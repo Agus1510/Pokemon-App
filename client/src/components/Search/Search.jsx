@@ -62,7 +62,7 @@ export const Search = () => {
             </option>
           ))}
         </select>
-        <select className={button0} name="Type2" onChange={byTipo2}>
+        <select className={button} name="Type2" onChange={byTipo2}>
           <option value="">Type2:</option>
           {options?.map((p) => (
             <option value={p.name} key={p.slot}>
