@@ -23,12 +23,31 @@ export const Form = () => {
     const [btnAlert, setBtnAlert]= useState(false);
 
     const validate = (input) => {
-        let errors ={};
-        if (!input.name) {
-            errors.name = "Name is required";
-        }
-
-        return errors;
+      let errors = {};
+      if (!input.name) {
+        errors.name = "Name it";
+      } else if (!/^[a-zA-Z]+$/.test(input.name)) {
+        errors.name = "Letters only";
+      }
+      if (input.hp <= 0) {
+        errors.hp = "Give it some HP";
+      }
+      if (input.attack <= 0) {
+        errors.attack = "Give it some attack";
+      }
+      if (input.defense <= 0) {
+        errors.defense = "Give it some defense";
+      }
+      if (input.speed <= 0) {
+        errors.speed = "Give it some speed";
+      }
+      if (input.height <= 0) {
+        errors.height = "Give it some height";
+      }
+      if (input.weight <= 0) {
+        errors.weight = "Give it some weight";
+      }
+      return errors;
     } 
 
     const [data, setData] = useState({
@@ -58,6 +77,7 @@ export const Form = () => {
           [e.target.name]: Number(e.target.value) <= 0 ? 0 : e.target.value,
         });
       }} else {
+        if(validate(e.target.value))
         setErrors(
           validate({
             ...data,
