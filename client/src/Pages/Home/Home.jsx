@@ -8,9 +8,10 @@ import { ordered, tipos } from "../../components/filters";
 export const Home = () => {
   let pokemons = useSelector((store) => store.pokemons);
   const type = useSelector((store) => store.type);
+  const type2 = useSelector((store) => store.type2);
   const order = useSelector((store) => store.order);
 
-  if (type) pokemons = tipos(type, pokemons);
+  if (type || type2) pokemons = tipos(type,type2, pokemons);
   if (order) pokemons = ordered(order, pokemons);
 
   const [page, setPage] = useState(0);

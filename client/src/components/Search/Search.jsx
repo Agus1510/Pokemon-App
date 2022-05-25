@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./search.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { filters, getByName, order, type } from "../../actions";
+import { filters, getByName, order, type, type2 } from "../../actions";
 
 export const Search = () => {
   const dispatch = useDispatch();
@@ -19,6 +19,11 @@ export const Search = () => {
   const byTipo = (e) => {
     dispatch(type(e.target.value));
   }
+
+  const byTipo2 = (e) => {
+    dispatch(type2(e.target.value));
+  }
+
   
   const submit = (e) => {
     e.preventDefault();
@@ -57,6 +62,14 @@ export const Search = () => {
             </option>
           ))}
         </select>
+        <select className={button0} name="Type2" onChange={byTipo2}>
+          <option value="">Type2:</option>
+          {options?.map((p) => (
+            <option value={p.name} key={p.slot}>
+              {p.name}
+            </option>
+          ))}
+        </select>
         <select name="creado" className={button} onChange={creadoBy}>
           <option value="0">Created by:</option>
           <option value="1">API</option>
@@ -67,6 +80,7 @@ export const Search = () => {
           <option value="a-z">A-Z</option>
           <option value="z-a">Z-A</option>
           <option value="fuerza+">Fuerza+</option>
+          <option value="fuerza<30">Fuerza30</option>
           <option value="fuerza-">Fuerza-</option>
         </select>
       </div>

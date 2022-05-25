@@ -2,6 +2,7 @@ const initialState = {
     types: [],
     pokemons: [],
     type: "",
+    type2:"",
     order: "",
     team: [],
   };
@@ -33,6 +34,11 @@ const initialState = {
           ...state,
           type: action.payload,
         };
+        case "BY_TYPE2":
+          return {
+            ...state,
+            type2: action.payload,
+          };
       case "ORDER":
         return {
           ...state,

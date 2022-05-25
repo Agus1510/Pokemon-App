@@ -29,6 +29,10 @@ export const Form = () => {
       } else if (!/^[a-zA-Z]+$/.test(input.name)) {
         errors.name = "Letters only";
       }
+
+      if(Number(input.vida) > 500){
+        errors.vida = "No puede ser > 500"
+      }
       return errors;
     } 
 
@@ -64,6 +68,7 @@ export const Form = () => {
           validate({
             ...data,
             [e.target.name]: e.target.value,
+            [e.target.vida]: e.target.value,
           })
         );
         setData({
@@ -131,7 +136,7 @@ export const Form = () => {
                 />
               </p>
               {errors.name ? <p className={style.dangerText}>{errors.name}</p> : null}
-              <p className={style.question}>
+              <p className={errors.vida ? style.danger : style.question}>
                 <label>Life</label>
                 <input
                   type="number"
@@ -140,6 +145,7 @@ export const Form = () => {
                   value={data.vida}
                   onChange={inputChange}
                 />
+               {errors.vida ? <p className={style.dangerText}>{errors.vida}</p> : null} 
               </p>
               <p className={style.question}>
                 <label>Strength</label>

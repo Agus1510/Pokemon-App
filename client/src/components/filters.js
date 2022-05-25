@@ -1,5 +1,5 @@
-export const tipos = (type, array) => {
-    if (array.length) return array.filter((p) => p.type.includes(type));
+export const tipos = (type, type2, array) => {
+    if (array.length) return array.filter((p) => p.type.includes(type) || p.type.includes(type2));
     return [];
   };
   
@@ -34,6 +34,12 @@ export const tipos = (type, array) => {
         });
         orde = orde.filter((e, i) => orde.indexOf(e) === i);
         return orde;
+        case "fuerza<30":
+            array.forEach((p) => {
+              if (p.fuerza <= 30) orde.push(p);
+            });
+          orde = orde.filter((e, i) => orde.indexOf(e) === i);
+          return orde;
       case "fuerza-":
         fuerza = fuerza.sort((a, b) => a - b);
         fuerza.forEach((f) => {

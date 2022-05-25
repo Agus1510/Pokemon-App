@@ -47,6 +47,13 @@ export function getTypes() {return async (dispatch) => {
       payload: type,
     });
   };
+
+  export const type2 = (type2) => (dispatch) => {
+    dispatch({
+      type: "BY_TYPE2",
+      payload: type2,
+    });
+  };
   
   export const order = (order) => (dispatch) => {
     dispatch({
