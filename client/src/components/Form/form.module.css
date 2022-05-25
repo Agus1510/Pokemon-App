@@ -163,6 +163,11 @@
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
   }
+
+  .dangerText{
+    font-size: 1em;
+    letter-spacing: 0.05em;
+  }
   
   form .danger input {
     -webkit-appearance: none;

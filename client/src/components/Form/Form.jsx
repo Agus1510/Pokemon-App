@@ -29,24 +29,6 @@ export const Form = () => {
       } else if (!/^[a-zA-Z]+$/.test(input.name)) {
         errors.name = "Letters only";
       }
-      if (input.hp <= 0) {
-        errors.hp = "Give it some HP";
-      }
-      if (input.attack <= 0) {
-        errors.attack = "Give it some attack";
-      }
-      if (input.defense <= 0) {
-        errors.defense = "Give it some defense";
-      }
-      if (input.speed <= 0) {
-        errors.speed = "Give it some speed";
-      }
-      if (input.height <= 0) {
-        errors.height = "Give it some height";
-      }
-      if (input.weight <= 0) {
-        errors.weight = "Give it some weight";
-      }
       return errors;
     } 
 
@@ -148,7 +130,7 @@ export const Form = () => {
                   required
                 />
               </p>
-              {errors.name ? <p className="danger">{errors.username}</p> : null}
+              {errors.name ? <p className={style.dangerText}>{errors.name}</p> : null}
               <p className={style.question}>
                 <label>Life</label>
                 <input
@@ -239,7 +221,7 @@ export const Form = () => {
                     {t.slot % 2 === 0 ? <br/> : null}
                   </div>
                 ))}
-                <input type="submit" value="Create" className={style.submit} />
+                <input type="submit" value="Create" className={style.submit} disabled={Object.keys(errors).length} />
               </div>
             </div>
           </form>
